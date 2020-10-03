@@ -1,0 +1,96 @@
+const express = require('express');
+const app       = express();
+const server    = require('http').createServer(app);
+const io        = require('socket.io').listen(server);
+const mongoose  = require ('mongoose'); 
+// const bcrypt    = require('bcrypt')
+
+// Initiate Mongo Server
+const InitiateMongoServer = require("./config/db");
+InitiateMongoServer();
+
+const userConnection = mongoose.model('userconnections', {name : String, date : Date})
+const dbmessage = mongoose.model('message',{ name : String, message : String})
+
+// use cors for cross origin
+const cors = require('cors');
+app.use(cors())
+
+
+// express
+app.use(express.static(__dirname));
+app.use(express.json())
+
+app.get("/", (req, res) => {
+	res.json({ message: "API Working" });
+});
+
+app.get('/users', (req, res) => {
+	res.json(users)
+})
+
+const createUser = 	require('./routes/user');
+app.post('/signup', (req, res) => createUser(req, res));
+
+
+app.post('/users/login', async (req, res) => {
+	const user = users.find(user => user.name === req.body.name)
+	console.log(user)
+	if (user === null) {
+		return res.status(400).send("Utilisateur introuvable");
+	}
+	try {
+		if( await bcrypt.compare(req.body.password, user.password)) {
+			res.send('Success')
+		} else {
+			res.send('Not allowed')
+		}
+	} catch {
+		res.status(500).send('catched');
+	}
+
+})
+
+server.listen('82', () => {
+  	console.log('Server listening on Port 82');
+})
+
+
+///////////////////////////////
+/* TEMPS REEL AVEC SOCKET.IO */
+///////////////////////////////
+io.on('connection', (socket) => {
+	socket.on('newMessage', (newMessage) => {
+		const {message, pseudo} = newMessage;
+		console.log('nouveau messag de ' + pseudo);
+		console.log('nouveau message =  ' + message);
+		socket.broadcast.emit('message', newMessage);
+
+		dbmessage.create({name: pseudo, message}, (err, message) => {
+			console.log(err)
+			console.log(message)
+		}) 
+	})
+
+	socket.on('newUser', (pseudo) => {
+		console.log(`${pseudo} vient de se conecter au serveur.`)
+
+		// save socket pseudo and broadcast incoming
+		socket.pseudo = pseudo;
+		socket.broadcast.emit('newUser', pseudo);
+
+		// save connection
+		const date = new Date();
+		userConnection.create({name: pseudo, date},(err, messages)=> {
+			// callback userConnecrtion create
+		})
+
+		// get history and send it to new user
+		dbmessage.find({}, (err, docs) => {
+			if (err === null && docs.length) {
+				console.log('send history to new user')
+				socket.emit("history", docs);
+			}
+		});
+	})
+});

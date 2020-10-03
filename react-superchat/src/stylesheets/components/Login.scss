@@ -1,0 +1,59 @@
+.login-form-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(212,212,212,1);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(212,212,212,1);
+    box-shadow: 0px 0px 15px 0px rgba(212,212,212,1);
+    border-radius: 10px;
+
+    .text-field {
+        width: 328px;
+        display: block;
+        margin: 30px;
+
+        input{
+            width: 300px;   
+        }
+    }
+
+    button,
+    a
+    {
+        margin: 30px auto;
+        display: block;
+        width: 328px;
+        height: 40px;
+        text-align: center;
+    }
+
+    .sign-in-btn {
+        background-color: #00a400;
+        color: #fff;
+        &:hover {
+            background-color: #008000;
+        }
+    }
+
+    .error {
+        color: #f00;
+        font-size: 12px;
+        margin: -28px 0 0 35px;
+        position: absolute;
+    }
+
+    .hideForm {
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        -webkit-transition: max-height 0.5s ease;
+    }
+
+    .showForm {
+        max-height: 300px;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        -webkit-transition: max-height 0.5s ease;
+    }
+}

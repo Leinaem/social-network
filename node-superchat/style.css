@@ -1,0 +1,58 @@
+.chatContainer {
+    width: 90%;
+    margin: auto;
+    background-color: #efe;
+    padding: 10px;
+    border-radius: 9px;
+    border: 1px solid #777;
+}
+
+#chatBox {
+    width: 100%;
+    margin: auto;
+    border: 1px solid #777;
+    border-radius: 6px;
+    min-height: 100px;
+}
+
+.formContainer {
+    border: 1px solid #777;
+    border-radius: 6px;
+    margin-top: 5px;
+
+}
+
+#inputMessage {
+    width: 100%;
+    box-sizing: border-box
+}
+
+.align-right {
+    text-align: right;
+}
+
+.messageContainer {
+    margin: 5px;
+}
+
+.message {
+    color: #333;
+    border-radius: 6px;
+    padding: 3px 6px;
+    display: inline-block;
+}
+
+.self {
+    background-color: #fdd;
+    border: 2px solid #e99;
+}
+
+.other {
+    background-color: #ddf;
+    border: 2px solid #99e;
+}
+
+.robot {
+    background-color: #dfd;
+    border: 2px solid #9e9;
+}

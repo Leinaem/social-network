@@ -1,0 +1,14 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+> git config --get commit.template
+Open repository: /var/www/html/front
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse feature/3747-realtime-notification
+> git rev-parse --symbolic-full-name feature/3747-realtime-notification@{u}
+fatal: no upstream configured for branch 'feature/3747-realtime-notification'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -v -z --stdin

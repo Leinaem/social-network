@@ -1,0 +1,17 @@
+[Info  - 22:52:28] ESLint server stopped.
+[Info  - 22:52:29] ESLint server running in node v10.11.0
+[Info  - 22:52:29] ESLint server is running.
+[Info  - 22:52:29] ESLint library loaded from: /usr/lib/node_modules/eslint/lib/api.js
+[Error - 22:52:29] ESLint stack trace:
+[Error - 22:52:29] Error: Failed to load config "react-app" to extend from.
+Referenced from: /var/www/html/seb/react-node-superchat/package.json
+    at configMissingError (/usr/lib/node_modules/eslint/lib/cli-engine/config-array-factory.js:233:9)
+    at ConfigArrayFactory._loadExtendedShareableConfig (/usr/lib/node_modules/eslint/lib/cli-engine/config-array-factory.js:712:23)
+    at ConfigArrayFactory._loadExtends (/usr/lib/node_modules/eslint/lib/cli-engine/config-array-factory.js:617:25)
+    at ConfigArrayFactory._normalizeObjectConfigDataBody (/usr/lib/node_modules/eslint/lib/cli-engine/config-array-factory.js:547:25)
+    at _normalizeObjectConfigDataBody.next (<anonymous>)
+    at ConfigArrayFactory._normalizeObjectConfigData (/usr/lib/node_modules/eslint/lib/cli-engine/config-array-factory.js:491:20)
+    at _normalizeObjectConfigData.next (<anonymous>)
+    at createConfigArray (/usr/lib/node_modules/eslint/lib/cli-engine/config-array-factory.js:307:25)
+    at ConfigArrayFactory.loadInDirectory (/usr/lib/node_modules/eslint/lib/cli-engine/config-array-factory.js:400:16)
+    at CascadingConfigArrayFactory._loadConfigInAncestors (/usr/lib/node_modules/eslint/lib/cli-engine/cascading-config-array-factory.js:304:46)

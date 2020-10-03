@@ -1,0 +1,78 @@
+[2020-09-18 08:29:18.283] [exthost] [info] extension host started
+[2020-09-18 08:29:18.322] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:javascript"}
+[2020-09-18 08:29:18.322] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
+[2020-09-18 08:29:18.395] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2020-09-18 08:29:18.395] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2020-09-18 08:29:18.400] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2020-09-18 08:29:18.400] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/emmet/dist/extension
+[2020-09-18 08:29:18.442] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2020-09-18 08:29:18.442] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/git/dist/main
+[2020-09-18 08:29:18.518] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2020-09-18 08:29:18.519] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2020-09-18 08:29:18.523] [exthost] [info] ExtensionService#_doActivateExtension CoenraadS.bracket-pair-colorizer {"startup":true,"activationEvent":"*"}
+[2020-09-18 08:29:18.523] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/seb/.vscode/extensions/coenraads.bracket-pair-colorizer-1.0.61/out/src/extension
+[2020-09-18 08:29:18.543] [exthost] [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint {"startup":true,"activationEvent":"*"}
+[2020-09-18 08:29:18.543] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/seb/.vscode/extensions/dbaeumer.vscode-eslint-1.9.1/client/out/extension
+[2020-09-18 08:29:18.572] [exthost] [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode {"startup":true,"activationEvent":"*"}
+[2020-09-18 08:29:18.572] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/seb/.vscode/extensions/esbenp.prettier-vscode-3.20.0/dist/extension
+[2020-09-18 08:29:18.735] [exthost] [info] ExtensionService#_doActivateExtension rebornix.project-snippets {"startup":true,"activationEvent":"*"}
+[2020-09-18 08:29:18.735] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/seb/.vscode/extensions/rebornix.project-snippets-0.5.0/out/src/extension
+[2020-09-18 08:29:18.739] [exthost] [info] ExtensionService#_doActivateExtension Zignd.html-css-class-completion {"startup":true,"activationEvent":"*"}
+[2020-09-18 08:29:18.739] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/seb/.vscode/extensions/zignd.html-css-class-completion-1.19.0/out/src/extension
+[2020-09-18 08:29:19.250] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm {"startup":true,"activationEvent":"workspaceContains:package.json"}
+[2020-09-18 08:29:19.250] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/npm/dist/main
+[2020-09-18 08:29:19.367] [exthost] [info] eager extensions activated
+[2020-09-18 08:30:05.720] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"activationEvent":"onLanguage:typescript"}
+[2020-09-18 08:30:05.720] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/extension-editing/dist/extension
+[2020-09-18 15:04:17.053] [exthost] [info] extension host started
+[2020-09-18 15:04:17.122] [exthost] [info] ExtensionService#_doActivateExtension vscode.php-language-features {"startup":false,"activationEvent":"onLanguage:php"}
+[2020-09-18 15:04:17.122] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/php-language-features/dist/phpMain
+[2020-09-18 15:04:17.136] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2020-09-18 15:04:17.136] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2020-09-18 15:04:17.139] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2020-09-18 15:04:17.139] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/emmet/dist/extension
+[2020-09-18 15:04:17.195] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2020-09-18 15:04:17.195] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/git/dist/main
+[2020-09-18 15:04:17.278] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2020-09-18 15:04:17.278] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2020-09-18 15:04:17.282] [exthost] [info] ExtensionService#_doActivateExtension CoenraadS.bracket-pair-colorizer {"startup":true,"activationEvent":"*"}
+[2020-09-18 15:04:17.282] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/seb/.vscode/extensions/coenraads.bracket-pair-colorizer-1.0.61/out/src/extension
+[2020-09-18 15:04:17.294] [exthost] [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint {"startup":true,"activationEvent":"*"}
+[2020-09-18 15:04:17.294] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/seb/.vscode/extensions/dbaeumer.vscode-eslint-1.9.1/client/out/extension
+[2020-09-18 15:04:17.330] [exthost] [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode {"startup":true,"activationEvent":"*"}
+[2020-09-18 15:04:17.330] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/seb/.vscode/extensions/esbenp.prettier-vscode-3.20.0/dist/extension
+[2020-09-18 15:04:17.531] [exthost] [info] ExtensionService#_doActivateExtension rebornix.project-snippets {"startup":true,"activationEvent":"*"}
+[2020-09-18 15:04:17.531] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/seb/.vscode/extensions/rebornix.project-snippets-0.5.0/out/src/extension
+[2020-09-18 15:04:17.534] [exthost] [info] ExtensionService#_doActivateExtension Zignd.html-css-class-completion {"startup":true,"activationEvent":"*"}
+[2020-09-18 15:04:17.534] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/seb/.vscode/extensions/zignd.html-css-class-completion-1.19.0/out/src/extension
+[2020-09-18 15:04:17.804] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm {"startup":true,"activationEvent":"workspaceContains:package.json"}
+[2020-09-18 15:04:17.804] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/npm/dist/main
+[2020-09-18 15:04:17.912] [exthost] [info] eager extensions activated
+[2020-09-18 15:04:24.603] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:javascript"}
+[2020-09-18 15:04:24.603] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
+[2020-09-18 15:04:38.522] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"activationEvent":"onLanguage:typescript"}
+[2020-09-18 15:04:38.522] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/extension-editing/dist/extension
+[2020-09-18 22:52:28.223] [exthost] [info] extension host started
+[2020-09-18 22:52:28.271] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:javascript"}
+[2020-09-18 22:52:28.272] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
+[2020-09-18 22:52:28.335] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2020-09-18 22:52:28.335] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2020-09-18 22:52:28.338] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2020-09-18 22:52:28.338] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/emmet/dist/extension
+[2020-09-18 22:52:28.376] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2020-09-18 22:52:28.376] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/git/dist/main
+[2020-09-18 22:52:28.448] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2020-09-18 22:52:28.448] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2020-09-18 22:52:28.452] [exthost] [info] ExtensionService#_doActivateExtension CoenraadS.bracket-pair-colorizer {"startup":true,"activationEvent":"*"}
+[2020-09-18 22:52:28.452] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/seb/.vscode/extensions/coenraads.bracket-pair-colorizer-1.0.61/out/src/extension
+[2020-09-18 22:52:28.464] [exthost] [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint {"startup":true,"activationEvent":"*"}
+[2020-09-18 22:52:28.464] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/seb/.vscode/extensions/dbaeumer.vscode-eslint-1.9.1/client/out/extension
+[2020-09-18 22:52:28.495] [exthost] [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode {"startup":true,"activationEvent":"*"}
+[2020-09-18 22:52:28.495] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/seb/.vscode/extensions/esbenp.prettier-vscode-3.20.0/dist/extension
+[2020-09-18 22:52:28.665] [exthost] [info] ExtensionService#_doActivateExtension rebornix.project-snippets {"startup":true,"activationEvent":"*"}
+[2020-09-18 22:52:28.665] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/seb/.vscode/extensions/rebornix.project-snippets-0.5.0/out/src/extension
+[2020-09-18 22:52:28.667] [exthost] [info] ExtensionService#_doActivateExtension Zignd.html-css-class-completion {"startup":true,"activationEvent":"*"}
+[2020-09-18 22:52:28.667] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/seb/.vscode/extensions/zignd.html-css-class-completion-1.19.0/out/src/extension
+[2020-09-18 22:52:28.889] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm {"startup":true,"activationEvent":"workspaceContains:package.json"}
+[2020-09-18 22:52:28.889] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/npm/dist/main
+[2020-09-18 22:52:29.005] [exthost] [info] eager extensions activated

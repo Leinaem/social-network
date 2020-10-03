@@ -1,0 +1,1583 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+> git config --get commit.template
+Open repository: /var/www/html/core
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git ls-tree -l HEAD -- /var/www/html/core/public/css/print.css
+> git show 152373336324a82bd00715f1cf7f433666af3f52
+> git show HEAD:public/css/print.css
+> git ls-tree -l HEAD -- /var/www/html/core/public/css/print.css
+> git show 152373336324a82bd00715f1cf7f433666af3f52
+> git show :public/css/print.css
+> git show :app/views/suivi/line/line_rdv.php
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :public/css/print.css
+> git check-ignore -v -z --stdin
+> git show :public/css/style/print.css
+> git check-ignore -v -z --stdin
+> git show :public/css/print.css
+> git show :app/views/suivi/line/line_rdv.php
+> git show :app/views/suivi/line/line_evenement.php
+> git show :app/views/suivi/line/line_rdv.php
+> git show :app/views/suivi/line/line_evenement.php
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :public/css/print.css
+> git show :app/views/suivi/line/line_rdv.php
+> git show :app/views/suivi/line/line_evenement.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_evenement.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_evenement.php
+> git show :app/views/suivi/line/line_rdv.php
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_evenement.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_rdv.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_evenement.php
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_rdv.php
+> git show :app/views/suivi/line/line_evenement.php
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_rdv.php
+> git show :app/views/suivi/line/line_evenement.php
+> git show :app/views/suivi/line/line_rdv.php
+> git show :public/css/print.css
+> git show :app/views/suivi/line/line_evenement.php
+> git show :public/css/print.css
+> git show :app/views/suivi/line/line_evenement.php
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_evenement.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_evenement.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_rdv.php
+> git show :app/views/suivi/line/line_evenement.php
+> git show :public/css/print.css
+> git check-ignore -v -z --stdin
+> git show :public/java/script/suivi/suivi.js
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_evenement.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_evenement.php
+> git show :app/views/suivi/line/line_rdv.php
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_evenement.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :public/css/table.css
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_evenement.php
+> git show :app/views/suivi/line/line_ressource.php
+> git show :app/views/suivi/line/line_evenement.php
+> git show :app/views/suivi/line/line_ressource.php
+> git show :app/views/suivi/line/line_evenement.php
+> git show :app/views/suivi/line/line_ressource.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_ressource.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_ressource.php
+> git show :app/views/suivi/line/line_consultation.php
+> git show :app/views/suivi/line/line_intervention_form.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_rdv.php
+> git show :app/views/suivi/line/line_intervention_form.php
+> git show :app/views/suivi/line/line_rdv.php
+> git show :app/views/suivi/line/line_intervention_form.php
+> git show :app/views/suivi/line/line_rdv.php
+> git show :app/views/suivi/line/line_intervention_form.php
+> git show :app/views/suivi/line/line_rdv.php
+> git show :app/views/suivi/line/line_intervention_form.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git show :public/java/script/suivi/suivi.js
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_intervention_form.php
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_intervention_form.php
+> git show :app/views/suivi/line/line_rdv.php
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_intervention_form.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_ressource.php
+> git show :app/views/suivi/line/line_evenement.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_intervention_form.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_intervention_form.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_rdv.php
+> git show :app/views/suivi/line/line_ressource.php
+> git show :app/views/suivi/line/line_intervention_form.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_ressource.php
+> git show :app/views/suivi/line/line_intervention_form.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/views/suivi/line/line_intervention_form.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :public/css/print.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :app/config/index.conf.php.default
+> git check-ignore -v -z --stdin
+> git show :public/css/print.css
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :app/config/index.conf.php
+> git ls-files --stage -- app/config/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse hotfix/3804-suivi-print
+> git rev-parse --symbolic-full-name hotfix/3804-suivi-print@{u}
+> git rev-list --left-right hotfix/3804-suivi-print...refs/remotes/origin/hotfix/3804-suivi-print
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose

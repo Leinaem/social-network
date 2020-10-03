@@ -1,0 +1,22 @@
+{
+    "name": "mon-super-chat",
+    "version": "0.1.0",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app"
+    },
+    "dependencies": {
+        "bcrypt": "^5.0.0",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "fs": "0.0.1-security",
+        "http": "0.0.1-security",
+        "mongodb": "^3.6.0",
+        "mongoose": "^5.10.2",
+        "socket.io": "^2.3.0"
+    },
+    "author": "Leinaem",
+    "description": "Un chat en temps réel"
+}
