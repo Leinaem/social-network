@@ -1,7 +1,6 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import routeList from './page/Routes';
-// import Accueil from './page/Accueil';
 import Error from './page/Error';
 import TopBar from './components/TopBar/'
 import { useSelector } from 'react-redux';

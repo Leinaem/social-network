@@ -7,7 +7,7 @@ POST http://localhost:82/signup
 Content-Type: application/json
 
 {
-    "name": "toto",
+    "name": "tata",
     "password": "1234"
 }
 

@@ -5,11 +5,9 @@ import Main from './Main';
 
 function App() {
 	return (
-		<div className="App">
-	        <Provider store={store} >
-				<Main/>
-			</Provider>
-		</div>
+		<Provider store={store} >
+			<Main/>
+		</Provider>
 	);
 }
 
