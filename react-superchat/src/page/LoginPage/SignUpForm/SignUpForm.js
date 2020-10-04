@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 
 const SignUpForm = (props) => {
-    const { signUp, showForm, register, handleSubmit } = props
+    const { signUp, showForm, register, handleSubmit, setError } = props
     let { errors } = props
 
     const addStyle = () => {
@@ -16,8 +16,9 @@ const SignUpForm = (props) => {
     }
 
 
+
     return (
-        <form onSubmit={handleSubmit((data) => signUp(data))}>
+        <form onSubmit={handleSubmit((data) => signUp(data, setError))}>
             {/* {showForm && */}
                 <Fragment>
                     <div className={addStyle()}>
@@ -57,6 +58,7 @@ const SignUpForm = (props) => {
                 type="submit"
                 className="sign-in-btn"
                 variant="contained"
+                disabled={Boolean(Object.keys(errors).length)}
             >
                 Inscription
             </Button>

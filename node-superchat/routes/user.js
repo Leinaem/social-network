@@ -7,7 +7,11 @@ const createUser = async (req, res) => {
         name
     });
     if (user !== null) {
-        return res.status(409).end("Ce pseudo n'est pas disponible");
+        res.status(409)
+        res.statusMessage = "Ce pseudo n'est pas disponible"
+        res.end();
+
+        return;
     }
     try {
         const hashedPassword = await bcrypt.hash(password, 10)
@@ -15,7 +19,6 @@ const createUser = async (req, res) => {
             name,
             password: hashedPassword
         });
-
         await user.save();
         res.status(201).send("on add");
     } catch {

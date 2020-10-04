@@ -15,24 +15,30 @@ const SignUpFormContainer = () => {
      * @param {*} data
      * @return {void}
      */
-    const signUp = () => {
+    const signUp = (data, setError) => {
         if (!showForm) {
             dispatch(setOpenFormAction("signUp"));
         } else {
-            console.log('formulaire conforme, j\'enregistre');
             fetch("http://localhost:82/signup", {
                 method: 'POST',
-                body: JSON.stringify({name: "toto"}),
+                body: JSON.stringify({
+                    name: data.pseudo,
+                    password: data.password
+                }),
                 headers: {
                 'Content-Type': 'application/json'
                 }
             })
             .then((res) => {
-                console.log('réponse du serveur', res)
-                if (res.status === 200) {
-                  console.log('ok')
-                } else {
-                    console.log(res.statusText)
+                if (
+                    res.status === 200 ||
+                    res.status === 201
+                    ) {
+                } else if (res.status === 409) {
+                    setError("pseudo", {
+                        type: "manual",
+                        message: res.statusText
+                      });
                 }
             })
         }
@@ -62,7 +68,7 @@ const SignUpFormContainer = () => {
             .required("La vérification du mot de passe est requise")
     } : {}
     const schema = yup.object().shape({...validationCriteria});
-    const { register, handleSubmit, errors } = useForm({
+    const { register, handleSubmit, errors, setError } = useForm({
         resolver: yupResolver(schema)
     });
 
@@ -73,6 +79,7 @@ const SignUpFormContainer = () => {
             register={register}
             handleSubmit={handleSubmit}
             errors={errors}
+            setError={setError}
         />
     )
 }

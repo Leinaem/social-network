@@ -3,7 +3,6 @@ const app       = express();
 const server    = require('http').createServer(app);
 const io        = require('socket.io').listen(server);
 const mongoose  = require ('mongoose'); 
-// const bcrypt    = require('bcrypt')
 
 // Initiate Mongo Server
 const InitiateMongoServer = require("./config/db");
@@ -15,7 +14,6 @@ const dbmessage = mongoose.model('message',{ name : String, message : String})
 // use cors for cross origin
 const cors = require('cors');
 app.use(cors())
-
 
 // express
 app.use(express.static(__dirname));
@@ -29,7 +27,7 @@ app.get('/users', (req, res) => {
 	res.json(users)
 })
 
-const createUser = 	require('./routes/user');
+const createUser = require('./routes/user');
 app.post('/signup', (req, res) => createUser(req, res));
 
 
