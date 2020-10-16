@@ -1,22 +1,30 @@
 const initialState = {
     isLogged: false,
     loggedUserName: '',
-    openForm: 'login'
-    // openForm: 'signIn'
+    openForm: 'login',
+    serverError : ''
 }
 
 const LoginReducer = (state = initialState, action) => {
-    switch (action.type) {
+    const { type, payload } = action;
+
+    switch (type) {
         case 'SET_LOGIN': {
             return {
                 ...state,
-                isLogged: action.payload
+                isLogged: payload
             }
         }
         case 'SET_ACTION': {
             return {
                 ...state,
-                openForm: action.payload
+                openForm: payload
+            }
+        }
+        case 'SET_ERROR_SERVER': {
+            return {
+                ...state,
+                serverError: payload
             }
         }
         default: {

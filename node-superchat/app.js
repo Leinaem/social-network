@@ -17,41 +17,18 @@ app.use(cors())
 
 // express
 app.use(express.static(__dirname));
-app.use(express.json())
-
-app.get("/", (req, res) => {
-	res.json({ message: "API Working" });
-});
-
-app.get('/users', (req, res) => {
-	res.json(users)
-})
-
-const createUser = require('./routes/user');
-app.post('/signup', (req, res) => createUser(req, res));
-
-
-app.post('/users/login', async (req, res) => {
-	const user = users.find(user => user.name === req.body.name)
-	console.log(user)
-	if (user === null) {
-		return res.status(400).send("Utilisateur introuvable");
-	}
-	try {
-		if( await bcrypt.compare(req.body.password, user.password)) {
-			res.send('Success')
-		} else {
-			res.send('Not allowed')
-		}
-	} catch {
-		res.status(500).send('catched');
-	}
-
-})
+app.use(express.json());
 
 server.listen('82', () => {
   	console.log('Server listening on Port 82');
 })
+
+///////////////////////////////
+//////////* ROUTES  *//////////
+///////////////////////////////
+const {createUser, logUser} = require('./routes/user');
+app.post('/signup', (req, res) => createUser(req, res));
+app.post('/signin', (req, res) => logUser(req, res));
 
 
 ///////////////////////////////

@@ -1,25 +1,78 @@
 import React from 'react';
 import LoginForm from './LoginForm';
+import { useForm } from 'react-hook-form';
+import {
+    setOpenFormAction,
+    setLoginAction,
+    setServerError
+} from '../../../redux/Actions/LoginActions';
+import { yupResolver } from '@hookform/resolvers';
 import { useSelector, useDispatch } from 'react-redux';
-import { setOpenFormAction, setLoginAction } from '../../../redux/Actions/LoginActions';
 
 const LoginFormContainer = () => {
     const { openForm } = useSelector((state) => state.login);
     const showForm = openForm === "login";
     const dispatch = useDispatch();
 
-    const login = () => {
+    const signIn = (data) => {
+        dispatch(setServerError(""));
         if (openForm === "signUp") {
             dispatch(setOpenFormAction("login"));
         } else {
-            // LOGIN PROCEDURE
-            console.log('connection');
-            // si tout est ok, on connecte le user
-            dispatch(setLoginAction(true));
+            fetch("http://localhost:82/signin", {
+                method: 'POST',
+                body: JSON.stringify({
+                    name: data.pseudo,
+                    password: data.password
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }      
+            })
+            .then((res) => {
+                if (res.status === 405) {
+                    dispatch(setServerError("Identifiant ou mot de passe incorrect"));
+                } else if (
+                    res.status === 200 ||
+                    res.status === 201
+                ) {
+                    dispatch(setServerError(""));
+                    dispatch(setLoginAction(true));
+                }
+            })
+            .catch(() => {
+                dispatch(setServerError('Le serveur ne répond pas'));
+            })
         }
     }
 
-    return <LoginForm login={login} showForm={showForm} />
+    // Validation schema
+    const yup = require('yup');
+    const validationCriteria = showForm ? {
+        pseudo: yup
+            .string()
+            .required("Le pseudo est requis"),
+        password: yup
+            .string()
+            .required("Le mot de passe est requis")
+    } : {}
+
+    const schema = yup.object().shape({...validationCriteria});
+    const { register, handleSubmit, errors, setError } = useForm({
+        resolver: yupResolver(schema)
+    });
+
+
+    return (
+        <LoginForm
+            signIn={signIn}
+            showForm={showForm}
+            register={register}
+            handleSubmit={handleSubmit}
+            errors={errors}
+            setError={setError}
+        />
+    )
 }
 
 export default LoginFormContainer;

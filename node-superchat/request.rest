@@ -7,13 +7,13 @@ POST http://localhost:82/signup
 Content-Type: application/json
 
 {
-    "name": "tata",
+    "name": "seb",
     "password": "1234"
 }
 
 ###
 
-POST http://localhost:82/users/login
+POST http://localhost:82/login
 Content-Type: application/json
 
 {

@@ -1,9 +1,19 @@
 import React, { Fragment } from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import { useSelector } from 'react-redux';
 
 const SignUpForm = (props) => {
-    const { signUp, showForm, register, handleSubmit, setError } = props
+    const {
+        signUp,
+        showForm,
+        register,
+        handleSubmit,
+        setError,
+    } = props;
+    const { serverError } = useSelector((state) => state.login);
+
+
     let { errors } = props
 
     const addStyle = () => {
@@ -16,17 +26,14 @@ const SignUpForm = (props) => {
     }
 
 
-
     return (
         <form onSubmit={handleSubmit((data) => signUp(data, setError))}>
-            {/* {showForm && */}
                 <Fragment>
                     <div className={addStyle()}>
                     <TextField
                         className="text-field"
                         label="Pseudo"
                         variant="outlined"
-                        defaultValue="test"
                         name="pseudo"
                         inputRef={register}
                     />
@@ -37,7 +44,6 @@ const SignUpForm = (props) => {
                         variant="outlined"
                         type="password"
                         name="password"
-                        defaultValue="azertyui"
                         inputRef={register}
                     />
                     {errors.password && <p className="error">{errors.password.message}</p>}
@@ -48,12 +54,15 @@ const SignUpForm = (props) => {
                         type="password"
                         name="passwordConfirm"
                         inputRef={register}
-                        defaultValue="azertyui"
                     />
                     {errors.passwordConfirm && <p className="error">{errors.passwordConfirm.message}</p>}
                     </div>
+                    {showForm && Boolean(serverError.length) &&
+                        <div className="errorServerContainer">
+                            <p className="errorServer">{serverError}</p>
+                        </div>
+                    }
                 </Fragment>
-            {/* } */}
             <Button
                 type="submit"
                 className="sign-in-btn"

@@ -1,21 +1,26 @@
 import React from 'react';
 import SignUpForm from './SignUpForm';
-import { setOpenFormAction } from '../../../redux/Actions/LoginActions';
-import { useSelector, useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
+import {
+    setOpenFormAction,
+    setServerError
+} from '../../../redux/Actions/LoginActions';
 import { yupResolver } from '@hookform/resolvers';
+import { useSelector, useDispatch } from 'react-redux';
 
 const SignUpFormContainer = () => {
     const { openForm } = useSelector((state) => state.login);
     const showForm = openForm === "signUp";
     const dispatch = useDispatch();
-    
+
     /**
      * Sign in function
-     * @param {*} data
+     * @param {Array} data form data to post
+     * @param {function} setError set custom error
      * @return {void}
      */
     const signUp = (data, setError) => {
+        dispatch(setServerError(""));
         if (!showForm) {
             dispatch(setOpenFormAction("signUp"));
         } else {
@@ -26,7 +31,7 @@ const SignUpFormContainer = () => {
                     password: data.password
                 }),
                 headers: {
-                'Content-Type': 'application/json'
+                    'Content-Type': 'application/json'
                 }
             })
             .then((res) => {
@@ -38,9 +43,10 @@ const SignUpFormContainer = () => {
                     setError("pseudo", {
                         type: "manual",
                         message: res.statusText
-                      });
+                    });
                 }
             })
+            .catch(() => dispatch(setServerError('Le serveur ne répond pas, veuillez réessayer ulterieurement')));
         }
     }
 
@@ -67,6 +73,7 @@ const SignUpFormContainer = () => {
             .oneOf([yup.ref('password'), null], "Les mots de passe doivent être identiques")
             .required("La vérification du mot de passe est requise")
     } : {}
+
     const schema = yup.object().shape({...validationCriteria});
     const { register, handleSubmit, errors, setError } = useForm({
         resolver: yupResolver(schema)
