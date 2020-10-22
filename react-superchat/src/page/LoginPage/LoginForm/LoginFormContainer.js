@@ -31,7 +31,7 @@ const LoginFormContainer = () => {
             })
             .then((res) => {
                 if (res.status === 405) {
-                    dispatch(setServerError("Identifiant ou mot de passe incorrect"));
+                    dispatch(setServerError(res.statusText));
                 } else if (
                     res.status === 200 ||
                     res.status === 201
@@ -40,8 +40,8 @@ const LoginFormContainer = () => {
                     dispatch(setLoginAction(true));
                 }
             })
-            .catch(() => {
-                dispatch(setServerError('Le serveur ne répond pas'));
+            .catch((res) => {
+                dispatch(setServerError(res.statusText));
             })
         }
     }

@@ -3,9 +3,7 @@ const bcrypt = require('bcrypt');
 
 const createUser = async (req, res) => {
     const { name, password } = req.body;
-    let user = await User.findOne({
-        name
-    });
+    let user = await User.findOne({ name });
     if (user !== null) {
         res.status(409);
         res.statusMessage = "Ce pseudo n'est pas disponible";
@@ -26,22 +24,22 @@ const createUser = async (req, res) => {
     }
 }
 
-// module.exports = createUser;
-
 const logUser = async (req, res) => {
-	const { name, password } = req.body;
-    let user = await User.findOne({
-        name
-    });
-	if (user === null) {
-		return res.status(405).send("Combinaison login/mot de passe incorrect 1");
-	}
-	try {
+    const { name, password } = req.body;
+    const errorConbinaison = "Identifiant ou mot de passe incorrect."
+    const user = await User.findOne({ name });
+    try {
+        if (user === null) {
+            res.status(405)
+            res.statusMessage = errorConbinaison
+            res.send();
+        }
+
 		if( await bcrypt.compare(password, user.password)) {
 			res.send('Success');
 		} else {
             res.status(405);
-            res.statusMessage = "Combinaison login/mot de passe incorrect 2";
+            res.statusMessage = errorConbinaison
             res.send();
 		}
 	} catch {
