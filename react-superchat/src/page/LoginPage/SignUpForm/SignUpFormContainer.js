@@ -46,7 +46,7 @@ const SignUpFormContainer = () => {
                     });
                 }
             })
-            .catch(() => dispatch(setServerError('Le serveur ne répond pas, veuillez réessayer ulterieurement')));
+            .catch(() => dispatch(setServerError('Le serveur ne répond pas.')));
         }
     }
 

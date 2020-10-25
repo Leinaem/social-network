@@ -40,9 +40,7 @@ const LoginFormContainer = () => {
                     dispatch(setLoginAction(true));
                 }
             })
-            .catch((res) => {
-                dispatch(setServerError(res.statusText));
-            })
+            .catch(() => dispatch(setServerError('Le serveur ne répond pas.')));            
         }
     }
 
