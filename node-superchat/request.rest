@@ -13,7 +13,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:82/login
+POST http://localhost:82/signin
 Content-Type: application/json
 
 {

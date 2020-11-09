@@ -16,5 +16,5 @@
         "socket.io": "^2.3.0"
     },
     "author": "Leinaem",
-    "description": "Un chat en temps réel avec authentifi"
+    "description": "Un chat en temps réel avec authentification"
 }

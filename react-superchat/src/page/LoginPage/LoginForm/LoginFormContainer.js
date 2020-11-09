@@ -2,9 +2,9 @@ import React from 'react';
 import LoginForm from './LoginForm';
 import { useForm } from 'react-hook-form';
 import {
-    setOpenFormAction,
     setLoginAction,
-    setServerError
+    setOpenFormAction,
+    addTmpMessageAction
 } from '../../../redux/Actions/LoginActions';
 import { yupResolver } from '@hookform/resolvers';
 import { useSelector, useDispatch } from 'react-redux';
@@ -15,7 +15,7 @@ const LoginFormContainer = () => {
     const dispatch = useDispatch();
 
     const signIn = (data) => {
-        dispatch(setServerError(""));
+        dispatch(addTmpMessageAction(null));
         if (openForm === "signUp") {
             dispatch(setOpenFormAction("login"));
         } else {
@@ -31,16 +31,22 @@ const LoginFormContainer = () => {
             })
             .then((res) => {
                 if (res.status === 405) {
-                    dispatch(setServerError(res.statusText));
+                    dispatch(addTmpMessageAction({
+                        type: 'error',
+                        message: res.statusText
+                    }))
                 } else if (
                     res.status === 200 ||
                     res.status === 201
                 ) {
-                    dispatch(setServerError(""));
+                    dispatch(addTmpMessageAction(null));
                     dispatch(setLoginAction(true));
                 }
             })
-            .catch(() => dispatch(setServerError('Le serveur ne répond pas.')));            
+            .catch(() => dispatch(addTmpMessageAction({
+                type: 'error',
+                message: 'Le serveur ne répond pas.'
+            })));            
         }
     }
 
@@ -59,7 +65,6 @@ const LoginFormContainer = () => {
     const { register, handleSubmit, errors, setError } = useForm({
         resolver: yupResolver(schema)
     });
-
 
     return (
         <LoginForm

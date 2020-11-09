@@ -2,11 +2,13 @@ import React from 'react';
 import SignUpForm from './SignUpForm';
 import { useForm } from 'react-hook-form';
 import {
+    setUserNameAction,
     setOpenFormAction,
-    setServerError
+    addTmpMessageAction
 } from '../../../redux/Actions/LoginActions';
 import { yupResolver } from '@hookform/resolvers';
 import { useSelector, useDispatch } from 'react-redux';
+
 
 const SignUpFormContainer = () => {
     const { openForm } = useSelector((state) => state.login);
@@ -20,7 +22,7 @@ const SignUpFormContainer = () => {
      * @return {void}
      */
     const signUp = (data, setError) => {
-        dispatch(setServerError(""));
+        dispatch(addTmpMessageAction(null));
         if (!showForm) {
             dispatch(setOpenFormAction("signUp"));
         } else {
@@ -38,7 +40,14 @@ const SignUpFormContainer = () => {
                 if (
                     res.status === 200 ||
                     res.status === 201
-                    ) {
+                ) {
+                    dispatch(setUserNameAction(data.pseudo))
+                    dispatch(setOpenFormAction("login"));
+                    dispatch(addTmpMessageAction({
+                        type:"success",
+                        message: 'Inscription réussi, entrez votre mot de passe'
+                    }));
+                    
                 } else if (res.status === 409) {
                     setError("pseudo", {
                         type: "manual",
@@ -46,7 +55,10 @@ const SignUpFormContainer = () => {
                     });
                 }
             })
-            .catch(() => dispatch(setServerError('Le serveur ne répond pas.')));
+            .catch(() => dispatch(addTmpMessageAction({
+                type: 'error',
+                message: 'Le serveur ne répond pas.'
+            })));
         }
     }
 

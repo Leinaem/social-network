@@ -6,7 +6,6 @@ import LoginForm from './LoginForm/';
 import SignUpForm from './SignUpForm/';
 
 const LoginPage = () => {
-    // login render
     return (
         <div className="login-form-container">
             <LoginForm />

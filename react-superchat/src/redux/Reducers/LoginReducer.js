@@ -1,8 +1,9 @@
 const initialState = {
-    isLogged: false,
-    loggedUserName: '',
-    openForm: 'login',
-    serverError : ''
+    isLogged: false, // boolean
+    userName: '', // string
+    openForm: 'login', // string
+    serverError : '', // string
+    tmpMessage : null // null || object
 }
 
 const LoginReducer = (state = initialState, action) => {
@@ -15,16 +16,22 @@ const LoginReducer = (state = initialState, action) => {
                 isLogged: payload
             }
         }
-        case 'SET_ACTION': {
+        case 'SET_USER_NAME': {
+            return {
+                ...state,
+                userName: payload
+            }
+        }
+        case 'SET_OPEN_FORM_ACTION': {
             return {
                 ...state,
                 openForm: payload
             }
         }
-        case 'SET_ERROR_SERVER': {
+        case 'ADD_TMP_MESSAGE': {
             return {
                 ...state,
-                serverError: payload
+                tmpMessage: payload
             }
         }
         default: {

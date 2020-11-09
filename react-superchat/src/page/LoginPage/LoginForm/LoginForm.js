@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react';
-import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import { useSelector } from 'react-redux';
+import TextField from '@material-ui/core/TextField';
+import { useDispatch, useSelector } from 'react-redux';
+import { setUserNameAction } from '../../../redux/Actions/LoginActions';
 
 const LoginForm = (props) => {
     const { signIn, showForm, register, handleSubmit, setError } = props;
+    const { userName, tmpMessage } = useSelector((state) => state.login);
+    const dispatch = useDispatch();
     let { errors } = props;
-    
-    const { serverError } = useSelector((state) => state.login);
 
     const addStyle = () => {
         if (showForm) {
@@ -16,6 +17,14 @@ const LoginForm = (props) => {
     
         errors = {};
         return "hideForm";
+    }
+
+    const displayMessage = () => {
+        if (showForm && tmpMessage && Object.keys(tmpMessage).length) {
+            return <p className={`tmpMessage ${tmpMessage.type}`}>{tmpMessage.message}</p>
+        } else {
+            return null
+        }
     }
     
     return (
@@ -28,8 +37,10 @@ const LoginForm = (props) => {
                         variant="outlined"
                         name="pseudo"
                         inputRef={register}
+                        onChange={(e) => dispatch(setUserNameAction(e.target.value))}
+                        value={userName}
                     />
-                    {errors.pseudo && <p className="error">{errors.pseudo.message}</p>}
+                    {errors.pseudo && <p className="fieldError error">{errors.pseudo.message}</p>}
                     <TextField
                         className="text-field"
                         label="Mot de passe"
@@ -38,13 +49,9 @@ const LoginForm = (props) => {
                         name="password"
                         inputRef={register}
                     />
-                    {errors.password && <p className="error">{errors.password.message}</p>}
+                    {errors.password && <p className="fieldError error">{errors.password.message}</p>}
                 </div>
-                {showForm && Boolean(serverError.length) &&
-                    <div className="errorServerContainer">
-                        <p className="errorServer">{serverError}</p>
-                    </div>
-                }
+                {displayMessage()}
             </Fragment>
             <Button
                 type="submit"

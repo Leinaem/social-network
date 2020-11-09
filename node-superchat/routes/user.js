@@ -3,8 +3,7 @@ const bcrypt = require('bcrypt');
 
 const createUser = async (req, res) => {
     const { name, password } = req.body;
-    let user = await User.findOne({ name });
-    if (user !== null) {
+    if (await User.findOne({ name })) {
         res.status(409);
         res.statusMessage = "Ce pseudo n'est pas disponible";
         res.end();
@@ -18,7 +17,7 @@ const createUser = async (req, res) => {
             password: hashedPassword
         });
         await user.save();
-        res.status(201).send("on add");
+        res.status(201).send();
     } catch {
         res.status(500).send();
     }
@@ -43,7 +42,7 @@ const logUser = async (req, res) => {
             res.send();
 		}
 	} catch {
-		res.status(500).send('catched');
+		res.status(500).send();
 	}
 }
 

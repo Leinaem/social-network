@@ -1,3 +1,6 @@
+$errorColor: #f00;
+$successColor: #00a400;
+
 .login-form-container {
     position: absolute;
     top: 40%;
@@ -37,26 +40,24 @@
     }
 
     .error {
-        color: #f00;
+        color: $errorColor;
+    }
+
+    .success {
+        color: $successColor;
+    }
+
+    .fieldError {
         font-size: 12px;
         margin: -28px 0 0 35px;
         position: absolute;
     }
-
-    .errorServerContainer {
+    
+    .tmpMessage {
+        font-size: 14px;
+        margin-top: -16px;
         text-align: center;
     }
-    
-    .errorServer {
-        color: #f00;
-        font-size: 14px;
-        margin-top: -12px;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-
 
     .hideForm {
         max-height: 0px;

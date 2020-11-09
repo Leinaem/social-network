@@ -1,7 +1,8 @@
 import {
     SET_LOGIN,
-    SET_ACTION,
-    SET_ERROR_SERVER
+    SET_USER_NAME,
+    ADD_TMP_MESSAGE,
+    SET_OPEN_FORM_ACTION
 } from '../Constants/LoginConstants'
 
 export const setLoginAction = (login) => {
@@ -13,16 +14,22 @@ export const setLoginAction = (login) => {
 
 export const setOpenFormAction = (openForm) => {
     return {
-        type: SET_ACTION,
+        type: SET_OPEN_FORM_ACTION,
         payload: openForm
     };
 };
 
-
-export const setServerError = (errorMessage) => {
+export const setUserNameAction = (userName) => {
     return {
-        type: SET_ERROR_SERVER,
-        payload: errorMessage
+        type: SET_USER_NAME,
+        payload: userName
+    }
+}
+
+export const addTmpMessageAction = (message) => {
+    return {
+        type: ADD_TMP_MESSAGE,
+        payload: message
     };
 };
 

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
+import { useSelector } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import { useSelector } from 'react-redux';
 
 const SignUpForm = (props) => {
     const {
@@ -11,9 +11,7 @@ const SignUpForm = (props) => {
         handleSubmit,
         setError,
     } = props;
-    const { serverError } = useSelector((state) => state.login);
-
-
+    const { tmpMessage } = useSelector((state) => state.login);
     let { errors } = props
 
     const addStyle = () => {
@@ -25,6 +23,13 @@ const SignUpForm = (props) => {
         return "hideForm";
     }
 
+    const displayMessage = () => {
+        if (showForm && tmpMessage && Object.keys(tmpMessage).length) {
+            return <p className={`tmpMessage ${tmpMessage.type}`}>{tmpMessage.message}</p>
+        } else {
+            return null
+        }
+    }
 
     return (
         <form onSubmit={handleSubmit((data) => signUp(data, setError))}>
@@ -37,7 +42,7 @@ const SignUpForm = (props) => {
                         name="pseudo"
                         inputRef={register}
                     />
-                    {errors.pseudo && <p className="error">{errors.pseudo.message}</p>}
+                    {errors.pseudo && <p className="fieldError error">{errors.pseudo.message}</p>}
                     <TextField
                         className="text-field"
                         label="Mot de passe"
@@ -46,7 +51,7 @@ const SignUpForm = (props) => {
                         name="password"
                         inputRef={register}
                     />
-                    {errors.password && <p className="error">{errors.password.message}</p>}
+                    {errors.password && <p className="fieldError error">{errors.password.message}</p>}
                     <TextField
                         className="text-field"
                         label="Confirmation mot de passe"
@@ -55,13 +60,9 @@ const SignUpForm = (props) => {
                         name="passwordConfirm"
                         inputRef={register}
                     />
-                    {errors.passwordConfirm && <p className="error">{errors.passwordConfirm.message}</p>}
+                    {errors.passwordConfirm && <p className="fieldError error">{errors.passwordConfirm.message}</p>}
                     </div>
-                    {showForm && Boolean(serverError.length) &&
-                        <div className="errorServerContainer">
-                            <p className="errorServer">{serverError}</p>
-                        </div>
-                    }
+                    {displayMessage()}
                 </Fragment>
             <Button
                 type="submit"
