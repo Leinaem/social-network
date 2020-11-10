@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import {
     setLoginAction,
     setOpenFormAction,
+    setUserNameAction,
     addTmpMessageAction
 } from '../../../redux/Actions/LoginActions';
 import { yupResolver } from '@hookform/resolvers';
@@ -39,6 +40,7 @@ const LoginFormContainer = () => {
                     res.status === 200 ||
                     res.status === 201
                 ) {
+                    dispatch(setUserNameAction(data.pseudo));
                     dispatch(addTmpMessageAction(null));
                     dispatch(setLoginAction(true));
                 }

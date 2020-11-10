@@ -1,9 +1,7 @@
 import React from 'react';
-import '../../stylesheets/components/Login.scss'
-import { Divider } from '@material-ui/core';
-
 import LoginForm from './LoginForm/';
 import SignUpForm from './SignUpForm/';
+import { Divider } from '@material-ui/core';
 
 const LoginPage = () => {
     return (

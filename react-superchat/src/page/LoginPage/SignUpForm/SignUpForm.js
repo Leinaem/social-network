@@ -14,27 +14,18 @@ const SignUpForm = (props) => {
     const { tmpMessage } = useSelector((state) => state.login);
     let { errors } = props
 
-    const addStyle = () => {
-        if (showForm) {
-            return "showForm"
-        }
-
-        errors = {};
-        return "hideForm";
-    }
-
     const displayMessage = () => {
         if (showForm && tmpMessage && Object.keys(tmpMessage).length) {
             return <p className={`tmpMessage ${tmpMessage.type}`}>{tmpMessage.message}</p>
-        } else {
-            return null
         }
+
+        return null
     }
 
     return (
         <form onSubmit={handleSubmit((data) => signUp(data, setError))}>
-                <Fragment>
-                    <div className={addStyle()}>
+            <Fragment>
+                <div className={!showForm ? 'hideForm': 'showForm'}>
                     <TextField
                         className="text-field"
                         label="Pseudo"
@@ -42,7 +33,7 @@ const SignUpForm = (props) => {
                         name="pseudo"
                         inputRef={register}
                     />
-                    {errors.pseudo && <p className="fieldError error">{errors.pseudo.message}</p>}
+                    {showForm && errors.pseudo && <p className="fieldError error">{errors.pseudo.message}</p>}
                     <TextField
                         className="text-field"
                         label="Mot de passe"
@@ -51,7 +42,7 @@ const SignUpForm = (props) => {
                         name="password"
                         inputRef={register}
                     />
-                    {errors.password && <p className="fieldError error">{errors.password.message}</p>}
+                    {showForm && errors.password && <p className="fieldError error">{errors.password.message}</p>}
                     <TextField
                         className="text-field"
                         label="Confirmation mot de passe"
@@ -60,15 +51,15 @@ const SignUpForm = (props) => {
                         name="passwordConfirm"
                         inputRef={register}
                     />
-                    {errors.passwordConfirm && <p className="fieldError error">{errors.passwordConfirm.message}</p>}
-                    </div>
-                    {displayMessage()}
-                </Fragment>
+                    {showForm && errors.passwordConfirm && <p className="fieldError error">{errors.passwordConfirm.message}</p>}
+                </div>
+                {displayMessage()}
+            </Fragment>
             <Button
                 type="submit"
                 className="sign-in-btn"
                 variant="contained"
-                disabled={Boolean(Object.keys(errors).length)}
+                disabled={showForm && Boolean(Object.keys(errors).length)}
             >
                 Inscription
             </Button>
