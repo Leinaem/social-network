@@ -26,9 +26,10 @@ server.listen('82', () => {
 ///////////////////////////////
 //////////* ROUTES  *//////////
 ///////////////////////////////
-const {createUser, logUser} = require('./routes/user');
+const {createUser, logUser, getUser} = require('./routes/user');
 app.post('/signup', (req, res) => createUser(req, res));
 app.post('/signin', (req, res) => logUser(req, res));
+app.get('/getuser', (req, res) => getUser(req, res));
 
 
 ///////////////////////////////

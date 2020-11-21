@@ -1,11 +1,11 @@
-import ChatMainPage from './ChatMainPage';
+import ChatMainPage from "./ChatMainPage";
 
 const routeList = [
-    {
-        path: '/chat',
-        exact: true,
-        component: ChatMainPage
-    }
+  {
+    path: "/chat",
+    exact: true,
+    component: ChatMainPage,
+  },
 ];
 
 export default routeList;

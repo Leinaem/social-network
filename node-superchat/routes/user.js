@@ -2,51 +2,51 @@ const User = require("../model/User");
 const bcrypt = require('bcrypt');
 
 const createUser = async (req, res) => {
-    const { name, password } = req.body;
-    if (await User.findOne({ name })) {
-        res.status(409);
-        res.statusMessage = "Ce pseudo n'est pas disponible";
-        res.end();
-
-        return;
-    }
-    try {
+    const { userName, password } = req.body;
+    if (await User.findOne({ userName })) {
+        return res.status(409).json({ error: "Cet identifiant n'est pas disponible" });
+    } else {
         const hashedPassword = await bcrypt.hash(password, 10)
         user = new User({
-            name,
+            userName,
             password: hashedPassword
         });
         await user.save();
-        res.status(201).send();
-    } catch {
-        res.status(500).send();
+
+        return res.status(201).json({ success: `Bienvenue ${userName}, entre ton mot de passe.`});
     }
 }
 
 const logUser = async (req, res) => {
-    const { name, password } = req.body;
-    const errorConbinaison = "Identifiant ou mot de passe incorrect."
-    const user = await User.findOne({ name });
-    try {
-        if (user === null) {
-            res.status(405)
-            res.statusMessage = errorConbinaison
-            res.send();
-        }
+    const { userName, password } = req.body;
+    const user = await User.findOne({ userName });
+    if (!user || (user && !await bcrypt.compare(password, user.password))) {
+        return res.status(401).json({ error: "Identifiant ou mot de passe incorrect." });
+    }  else {
+        return res.json({userName});
+    }
+}
 
-		if( await bcrypt.compare(password, user.password)) {
-			res.send('Success');
-		} else {
-            res.status(405);
-            res.statusMessage = errorConbinaison
-            res.send();
-		}
-	} catch {
-		res.status(500).send();
-	}
+const getUser = async (req, res) => {
+    const { userName } = req.body;
+    const user = await User.findOne({ userName });
+    try {
+        res.send(JSON.stringify({
+            userName: user.userName,
+            admin: user.admin,
+            createdAt: user.createdAt,
+            toto: user.password
+        }));
+        // res.send(user);
+    } catch {
+        res.status(500).send();
+    }
+
+
 }
 
 module.exports = {
     createUser,
-    logUser
+    logUser,
+    getUser
 };

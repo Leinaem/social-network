@@ -1,11 +1,10 @@
-import React from 'react';
-import TopBar from './TopBar';
+import React from "react";
+import TopBar from "./TopBar";
 
 const TopBarContainer = () => {
+  // logic
 
-    // logic
-
-    return <TopBar />
-}
+  return <TopBar />;
+};
 
 export default TopBarContainer;
