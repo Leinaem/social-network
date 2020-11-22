@@ -2,7 +2,7 @@ import React from "react";
 import LoginForm from "./LoginForm";
 import { useForm } from "react-hook-form";
 import {
-  setLoginAction,
+  isLoading,
   fetchCurrentUser,
   setOpenFormAction,
   addTmpMessageAction,
@@ -25,7 +25,6 @@ const LoginFormContainer = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          // token: localStorage.getItem('token')
         },
         body: JSON.stringify({
           userName,
@@ -42,19 +41,21 @@ const LoginFormContainer = () => {
               })
             );
           } else if (json.userName) {
+            dispatch(isLoading(true));
             dispatch(addTmpMessageAction(null));
-            dispatch(setLoginAction(true));
-            // dispatch(fetchCurrentUser(data.pseudo))
+            dispatch(fetchCurrentUser(userName));
           }
         })
-        .catch(() =>
+        .catch((err) => {
+          console.log(err);
+          dispatch(isLoading(false));
           dispatch(
             addTmpMessageAction({
               type: "error",
               message: "Le serveur ne répond pas.",
             })
-          )
-        );
+          );
+        });
     }
   };
 

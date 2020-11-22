@@ -25,7 +25,6 @@ const SignUpFormContainer = () => {
       dispatch(setOpenFormAction("signUp"));
     } else {
       const { userName, password } = data;
-      console.log(data);
       fetch("http://localhost:82/signup", {
         method: "POST",
         headers: {
@@ -38,7 +37,6 @@ const SignUpFormContainer = () => {
       })
         .then((res) => res.json())
         .then((json) => {
-          console.log(json);
           if (json.error) {
             setError("userName", {
               type: "manual",
@@ -46,13 +44,16 @@ const SignUpFormContainer = () => {
             });
           } else if (json.success) {
             dispatch(setOpenFormAction("login"));
-            dispatch(addTmpMessageAction({
-                type:"success",
-                message: json
-            }));
+            dispatch(
+              addTmpMessageAction({
+                type: "success",
+                message: json.success,
+              })
+            );
           }
         })
-        .catch(() => {
+        .catch((err) => {
+          console.log(err);
           dispatch(
             addTmpMessageAction({
               type: "error",

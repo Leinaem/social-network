@@ -1,6 +1,8 @@
 import {
   SET_LOGIN,
-  SET_USER_NAME,
+  SET_LOGOUT,
+  SET_USER_DATA,
+  SET_IS_LOADING,
   ADD_TMP_MESSAGE,
   SET_OPEN_FORM_ACTION,
 } from "../../Constants/LoginConstants";
@@ -26,35 +28,49 @@ export const addTmpMessageAction = (message) => {
   };
 };
 
-export const fetchCurrentUser = (userName) => {
-  fetch("http://localhost:82/getuser", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      token: localStorage.getItem("token"),
-    },
-    body: JSON.stringify({
-      userName,
-    }),
-  }).then((res) => console.log(res));
+export const setUserData = (userData) => {
+  return {
+    type: SET_USER_DATA,
+    payload: userData,
+  };
 };
 
-// export const fetchCurrentUser = () => {
-//     return (dispatch, getState, { client }) => {
-//         const fetchUser = async () => {
-//             const { data } = await client.query({
-//                 query: GQL_CURRENT_USER,
-//                 fetchPolicy: 'no-cache'
-//             });
+/**
+ * Fetch current user datas
+ * @param {String} userName
+ * @return {Function} Action dispatch
+ */
+export const fetchCurrentUser = (userName) => {
+  return (dispatch) => {
+    dispatch(
+      async () =>
+        await fetch(`http://localhost:82/getuser/${userName}`)
+          .then((res) => res.json())
+          .then((data) => {
+            localStorage.setItem("user", data.userName);
+            dispatch(setUserData(data));
+            dispatch(setLoginAction(true));
+            dispatch(isLoading(false));
+          })
+    );
+  };
+};
 
-//             return data;
-//         };
+/**
+ * Log out
+ *
+ * @return {Object} Action dispatch
+ */
+export const setLogOut = () => {
+  localStorage.removeItem("user");
+  return {
+    type: SET_LOGOUT,
+  };
+};
 
-//         const promise = fetchUser();
-
-//         return promise.then((result) => {
-//             dispatch(setUserLoading(false));
-//             dispatch(setCurrentUser(result.CurrentUser));
-//         });
-//     };
-// };
+export const isLoading = (loading) => {
+  return {
+    type: SET_IS_LOADING,
+    payload: loading,
+  };
+};

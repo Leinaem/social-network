@@ -28,21 +28,16 @@ const logUser = async (req, res) => {
 }
 
 const getUser = async (req, res) => {
-    const { userName } = req.body;
-    const user = await User.findOne({ userName });
-    try {
-        res.send(JSON.stringify({
-            userName: user.userName,
-            admin: user.admin,
-            createdAt: user.createdAt,
-            toto: user.password
-        }));
-        // res.send(user);
-    } catch {
-        res.status(500).send();
+    const user = await User.findOne({ userName: req.params.username });
+    if (!user) {
+        return res.status(404).json({ error: "Utilisateur non trouvé." });
     }
 
-
+    return res.json({
+        userName: user.userName,
+        admin: user.admin,
+        createdAt: user.createdAt,
+    });
 }
 
 module.exports = {

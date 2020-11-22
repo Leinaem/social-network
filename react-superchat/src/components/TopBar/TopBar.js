@@ -1,29 +1,24 @@
 import React, { Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setLoginAction } from "../../redux/Actions/user/LoginActions";
+import { setLogOut, isLoading } from "../../redux/Actions/user/LoginActions";
 
 const TopBar = () => {
-  const { isLogged } = useSelector((state) => state.login);
   const dispatch = useDispatch();
+  const { userData } = useSelector((state) => state.login);
 
   const renderBtn = () => {
-    if (isLogged) {
-      return (
-        <Fragment>
-          <p>name ici</p>
-          <button onClick={() => dispatch(setLoginAction(false))}>
-            Déconnection
-          </button>
-        </Fragment>
-      );
-    }
-
     return (
       <Fragment>
-        <button onClick={() => dispatch(setLoginAction(true))}>
-          Connexion
+        <p>{userData.userName}</p>
+        <p>{userData.admin}</p>
+        <button
+          onClick={() => {
+            dispatch(isLoading(true));
+            dispatch(setLogOut(false));
+          }}
+        >
+          Déconnection
         </button>
-        <button>Créer un compte</button>
       </Fragment>
     );
   };

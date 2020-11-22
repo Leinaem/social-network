@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
 import routeList from "./page/Routes";
 import Error from "./page/Error";
@@ -6,9 +6,24 @@ import TopBar from "./components/TopBar/";
 import { useSelector } from "react-redux";
 import Login from "./page/LoginPage";
 import ChatMainPage from "./page/ChatMainPage";
+import { fetchCurrentUser } from "./redux/Actions/user/LoginActions";
+import { useDispatch } from "react-redux";
+import Loading from "./components/core/Loading";
 
 const Main = () => {
-  const { isLogged } = useSelector((state) => state.login);
+  const { isLogged, isLoading } = useSelector((state) => state.login);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    if (user) {
+      dispatch(fetchCurrentUser(user));
+    }
+  }, [dispatch]);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   if (!isLogged) {
     return <Login />;
