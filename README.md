@@ -2,7 +2,7 @@
 
 ## Back-end
 ### using Node
--   Express
+- Express
 - Socket.io
 - MongoDB
 
@@ -25,9 +25,9 @@ ___
     - Redux
     - Redux-thunk
 - MaterialUI
-- code formater
+- Code formatter
     - Prettier
-    -Eslint
+    - Eslint
     
 ## Install
 ```
