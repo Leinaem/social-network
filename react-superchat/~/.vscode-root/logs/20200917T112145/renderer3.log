@@ -1,4 +1,0 @@
-[2020-09-17 12:21:04.545] [renderer3] [warning] {}
-[2020-09-17 15:15:07.076] [renderer3] [warning] UNRESPONSIVE extension host, 'CoenraadS.bracket-pair-colorizer' took 100% of 5230.491ms, saved PROFILE here: '/tmp/exthost-bd020c.cpuprofile' [{"id":"CoenraadS.bracket-pair-colorizer","total":5230222,"percentage":100}]
-[2020-09-17 15:15:10.765] [renderer3] [warning] Aborted onWillSaveTextDocument-event after 1750ms
-[2020-09-17 18:42:29.861] [renderer3] [error] net::ERR_INTERNET_DISCONNECTED: Error: net::ERR_INTERNET_DISCONNECTED
