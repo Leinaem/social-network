@@ -1,4 +1,5 @@
 const User = require("../model/User");
+const UserConnection = require("../model/UserConnection");
 const bcrypt = require('bcrypt');
 
 const createUser = async (req, res) => {
@@ -23,6 +24,12 @@ const logUser = async (req, res) => {
     if (!user || (user && !await bcrypt.compare(password, user.password))) {
         return res.status(401).json({ error: "Identifiant ou mot de passe incorrect." });
     }  else {
+        userConnection = new UserConnection({
+            userName,
+            userId: user.id
+        });
+        await userConnection.save();
+
         return res.json({id: user.id});
     }
 }
