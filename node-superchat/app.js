@@ -8,7 +8,6 @@ const mongoose  = require ('mongoose');
 const InitiateMongoServer = require("./config/db");
 InitiateMongoServer();
 
-const userConnection = mongoose.model('userconnections', {name : String, date : Date})
 const dbmessage = mongoose.model('message',{ name : String, message : String})
 
 // use cors for cross origin
@@ -54,12 +53,6 @@ io.on('connection', (socket) => {
 		// save socket pseudo and broadcast incoming
 		socket.pseudo = pseudo;
 		socket.broadcast.emit('newUser', pseudo);
-
-		// save connection
-		const date = new Date();
-		userConnection.create({name: pseudo, date},(err, messages)=> {
-			// callback userConnecrtion create
-		})
 
 		// get history and send it to new user
 		dbmessage.find({}, (err, docs) => {
