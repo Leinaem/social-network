@@ -15,9 +15,9 @@ const Main = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const user = localStorage.getItem("user");
-    if (user) {
-      dispatch(fetchCurrentUser(user));
+    const userId = localStorage.getItem("userId");
+    if (userId) {
+      dispatch(fetchCurrentUser(userId));
     }
   }, [dispatch]);
 

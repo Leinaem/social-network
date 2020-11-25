@@ -40,10 +40,10 @@ const LoginFormContainer = () => {
                 message: json.error,
               })
             );
-          } else if (json.userName) {
+          } else if (json.id) {
             dispatch(isLoading(true));
             dispatch(addTmpMessageAction(null));
-            dispatch(fetchCurrentUser(userName));
+            dispatch(fetchCurrentUser(json.id));
           }
         })
         .catch((err) => {

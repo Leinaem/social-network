@@ -23,20 +23,23 @@ const logUser = async (req, res) => {
     if (!user || (user && !await bcrypt.compare(password, user.password))) {
         return res.status(401).json({ error: "Identifiant ou mot de passe incorrect." });
     }  else {
-        return res.json({userName});
+        return res.json({id: user.id});
     }
 }
 
 const getUser = async (req, res) => {
-    const user = await User.findOne({ userName: req.params.username });
+    const user = await User.findOne({ _id: req.params.id });
     if (!user) {
         return res.status(404).json({ error: "Utilisateur non trouvé." });
     }
 
     return res.json({
-        userName: user.userName,
-        admin: user.admin,
-        createdAt: user.createdAt,
+        user : {
+            id: user._id,
+            userName: user.userName,
+            admin: user.admin,
+            createdAt: user.createdAt
+        }
     });
 }
 

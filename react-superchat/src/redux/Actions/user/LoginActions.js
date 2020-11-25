@@ -37,19 +37,28 @@ export const setUserData = (userData) => {
 
 /**
  * Fetch current user datas
- * @param {String} userName
+ * @param {String} id
  * @return {Function} Action dispatch
  */
-export const fetchCurrentUser = (userName) => {
+export const fetchCurrentUser = (id) => {
   return (dispatch) => {
     dispatch(
       async () =>
-        await fetch(`http://localhost:82/getuser/${userName}`)
+        await fetch(`http://localhost:82/getuser/${id}`)
           .then((res) => res.json())
           .then((data) => {
-            localStorage.setItem("user", data.userName);
-            dispatch(setUserData(data));
-            dispatch(setLoginAction(true));
+            if (data.error) {
+              dispatch(
+                addTmpMessageAction({
+                  type: "error",
+                  message: data.error,
+                })
+              );
+            } else {
+              localStorage.setItem("userId", data.user.id);
+              dispatch(setUserData(data.user));
+              dispatch(setLoginAction(true));
+            }
             dispatch(isLoading(false));
           })
     );
@@ -62,7 +71,7 @@ export const fetchCurrentUser = (userName) => {
  * @return {Object} Action dispatch
  */
 export const setLogOut = () => {
-  localStorage.removeItem("user");
+  localStorage.removeItem("userId");
   return {
     type: SET_LOGOUT,
   };
