@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./../../style.css";
 import io from "socket.io-client";
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
 const ChatMainPage = () => {
   let socket = io.connect("http://localhost:82");
