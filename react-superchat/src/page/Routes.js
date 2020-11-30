@@ -2,7 +2,7 @@ import ChatMainPage from "./ChatMainPage";
 
 const routeList = [
   {
-    path: "/chat",
+    path: "/",
     exact: true,
     component: ChatMainPage,
   },

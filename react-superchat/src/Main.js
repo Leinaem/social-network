@@ -5,12 +5,12 @@ import Error from "./page/Error";
 import TopBar from "./components/TopBar/";
 import { useSelector } from "react-redux";
 import Login from "./page/LoginPage";
-import ChatMainPage from "./page/ChatMainPage";
 import { fetchCurrentUser } from "./redux/Actions/user/LoginActions";
 import { useDispatch } from "react-redux";
 import Loading from "./components/core/Loading";
 
 const Main = () => {
+  console.log('render MAIN')
   const { isLogged, isLoading } = useSelector((state) => state.login);
   const dispatch = useDispatch();
 
@@ -33,13 +33,11 @@ const Main = () => {
     <HashRouter>
       <TopBar />
       <Switch>
-        <Route exact path="/" component={ChatMainPage} />
         {routeList.map((item, key) => {
-          const ComponentTag = item.component;
 
           return (
             <Route
-              component={ComponentTag}
+              component={item.component}
               exact={item.exact}
               path={item.path}
               key={key}
@@ -52,4 +50,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default React.memo(Main);
