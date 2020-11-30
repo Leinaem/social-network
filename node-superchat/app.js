@@ -1,26 +1,23 @@
-const express   = require('express');
-const app       = express();
-const server    = require('http').createServer(app);
-const io        = require('socket.io').listen(server);
-const mongoose  = require ('mongoose');
+const express  = require('express');
+const app      = express();
+const server   = require('http').createServer(app);
+const io       = require('socket.io').listen(server);
+const mongoose = require ('mongoose');
 
 // Initiate Mongo Server
 const InitiateMongoServer = require("./config/db");
 InitiateMongoServer();
 
-const dbmessage = mongoose.model('message',{ name : String, message : String})
 
 // use cors for cross origin
 const cors = require('cors');
-app.use(cors())
+app.use(cors());
 
 // express
 app.use(express.static(__dirname));
 app.use(express.json());
 
-server.listen('82', () => {
-  	console.log('Server listening on Port 82');
-})
+server.listen('82', () => console.log('Server listening on Port 82'));
 
 ///////////////////////////////
 //////////* ROUTES  *//////////
@@ -38,11 +35,11 @@ const { socketManagement } = require('./lib/socket');
 socketManagement(io);
 
 
+// @todo make a model for this
+const dbmessage = mongoose.model('message',{ name : String, message : String});
 
 
 // io.on('connection', (socket) => {
-// 	console.log('Connection xXx');
-// 	socket.on('isOnline', user => console.log(user));
 // 	socket.on('newMessage', (newMessage) => {
 // 		const {message, pseudo} = newMessage;
 // 		console.log('nouveau messag de ' + pseudo);

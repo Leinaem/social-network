@@ -1,13 +1,18 @@
-import React, { Fragment, useEffect, useState } from "react";
+import 
+React, 
+{ Fragment, 
+  // useEffect,
+  // useState
+} from "react";
 import "./../../style.css";
-import io from "socket.io-client";
-import { useSelector } from "react-redux";
+// import io from "socket.io-client";
+// import { useSelector } from "react-redux";
 
 const ChatMainPage = () => {
-  console.log('chat main page render')
-  let socket = io.connect("http://localhost:82");
-  const pseudo = useSelector((state) => state.login.userData.userName);
-  const [message, setMessage] = useState("");
+  // console.log('chat main page render')
+  // let socket = io.connect("http://localhost:82");
+  // const pseudo = useSelector((state) => state.login.userData.userName);
+  // const [message, setMessage] = useState("");
 
   // /**
   //  * Add message in chat box
@@ -125,6 +130,7 @@ const ChatMainPage = () => {
 
   return (
     <Fragment>
+      <div style={{border: "1px solid red"}} id="connected-user"></div>
       <h1>Temps réel</h1>
       <div className="chatContainer">
         <div id="chatBox"></div>
