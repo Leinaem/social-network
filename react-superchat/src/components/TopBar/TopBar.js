@@ -1,9 +1,8 @@
 import React, { Fragment } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setLogOut, isLoading } from "../../redux/Actions/user/LoginActions";
+import { useSelector } from "react-redux";
 
-const TopBar = () => {
-  const dispatch = useDispatch();
+const TopBar = (props) => {
+  const { handleDisconnect } = props;
   const { userData } = useSelector((state) => state.login);
 
   const renderBtn = () => {
@@ -11,14 +10,7 @@ const TopBar = () => {
       <Fragment>
         <p>{userData.userName}</p>
         <p>{userData.admin}</p>
-        <button
-          onClick={() => {
-            dispatch(isLoading(true));
-            dispatch(setLogOut(false));
-          }}
-        >
-          Déconnection
-        </button>
+        <button onClick={() => handleDisconnect()}>Déconnection</button>
       </Fragment>
     );
   };

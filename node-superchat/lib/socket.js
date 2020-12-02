@@ -20,12 +20,18 @@ const socketManagement = (io) => {
       // socket.broadcast.emit('newUser', user)
       // Emettre à TOUS
       io.sockets.emit('newUser', userData)
+      socket.emit('connected', socket.id)
     })
 
     socket.on('disconnect', () => {
       if (!userData) {
         return false;
       }
+      delete userList[socket.id];
+      io.sockets.emit('userLeft', userData);
+    })
+
+    socket.on('logout', () => {
       delete userList[socket.id];
       io.sockets.emit('userLeft', userData);
     })

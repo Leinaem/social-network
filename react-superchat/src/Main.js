@@ -10,7 +10,6 @@ import { useDispatch } from "react-redux";
 import Loading from "./components/core/Loading";
 
 const Main = () => {
-  console.log('render MAIN')
   const { isLogged, isLoading } = useSelector((state) => state.login);
   const dispatch = useDispatch();
 
@@ -34,7 +33,6 @@ const Main = () => {
       <TopBar />
       <Switch>
         {routeList.map((item, key) => {
-
           return (
             <Route
               component={item.component}
