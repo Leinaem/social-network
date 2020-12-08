@@ -1,5 +1,5 @@
 {
-    "name": "leinaem-chat",
+    "name": "leinaem-social-network-back",
     "version": "0.1.0",
     "main": "app.js",
     "scripts": {
