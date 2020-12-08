@@ -1,2 +1,0 @@
-export const SET_SOCKET_CONNECTED = "SET_SOCKET_CONNECTED";
-export const SET_SOCKET_ID = "SET_SOCKET_ID";
