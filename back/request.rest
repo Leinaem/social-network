@@ -30,3 +30,6 @@ Content-Type: application/json
     "userName": "seb"
 }
 
+
+###
+GET http://localhost:82/history

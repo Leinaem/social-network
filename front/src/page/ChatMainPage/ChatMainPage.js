@@ -1,17 +1,33 @@
 import React, {
   Fragment,
   // useEffect,
-  // useState
+  useState,
+  useEffect,
 } from "react";
 import "./../../style.css";
-// import io from "socket.io-client";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+import { socket } from "./../../service/socket";
 
 const ChatMainPage = () => {
-  // console.log('chat main page render')
-  // let socket = io.connect("http://localhost:82");
-  // const pseudo = useSelector((state) => state.login.userData.userName);
-  // const [message, setMessage] = useState("");
+  const { userName } = useSelector((state) => state.login.userData);
+  const [message, setMessage] = useState("");
+  const [history, setHistory] = useState([]);
+
+  console.log(history);
+
+  useEffect(() => {
+    const fetchHistory = async () => {
+      const history = await fetch("http://localhost:82/history");
+      const result = await history.json();
+      setHistory(result);
+    };
+
+    fetchHistory();
+  }, []);
+
+  useEffect(() => {
+    // console.log(message);
+  }, [message]);
 
   // /**
   //  * Add message in chat box
@@ -68,24 +84,24 @@ const ChatMainPage = () => {
   //   setMessage(e.target.value);
   // };
 
-  // /**
-  //  * Send message to everyone
-  //  */
-  // const send = () => {
-  //   if (message.trim().length) {
-  //     const newMessage = {
-  //       message,
-  //       pseudo,
-  //     };
-  //     socket.emit("newMessage", newMessage);
-  //     console.log("send message");
-  //     const inputText = document.getElementById("inputMessage");
-  //     inputText.value = "";
-  //     insertMessage("self", null);
+  /**
+   * Send message to everyone
+   */
+  const send = () => {
+    if (message.trim().length) {
+      const newMessage = {
+        message,
+        userName,
+      };
+      socket.emit("addMessage", newMessage);
+      console.log("send message");
+      const inputText = document.getElementById("inputMessage");
+      inputText.value = "";
+      // insertMessage("self", null);
 
-  //     return false;
-  //   }
-  // };
+      return false;
+    }
+  };
 
   // /**
   //  * Check keypress for Enter
@@ -138,13 +154,13 @@ const ChatMainPage = () => {
             type="text"
             id="inputMessage"
             autoFocus
-            // onChange={(e) => handleInputChange(e)}
+            onChange={(e) => setMessage(e.target.value)}
           ></textarea>
           <button
             id="sendBtn"
             type="button"
             value="Envoyer"
-            // onClick={() => send()}
+            onClick={() => send()}
           >
             Envoyer
           </button>

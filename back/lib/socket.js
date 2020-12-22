@@ -1,4 +1,5 @@
 const md5 = require('MD5');
+const { addMessage, getHistory } = require('./message');
 
 const socketManagement = (io) => {
 
@@ -8,6 +9,7 @@ const socketManagement = (io) => {
 
     let userData = false;
     socket.on('login', (userConnected) => {
+      // Envoi à l'utilisateur la liste des utilisatur connectés
       for(let user in userList) {
         socket.emit('newUser', userList[user])
       }
@@ -20,7 +22,8 @@ const socketManagement = (io) => {
       // socket.broadcast.emit('newUser', user)
       // Emettre à TOUS
       io.sockets.emit('newUser', userData)
-      socket.emit('connected', socket.id)
+      
+      socket.emit('connected', socket.id);
     })
 
     socket.on('disconnect', () => {
@@ -34,6 +37,12 @@ const socketManagement = (io) => {
     socket.on('logout', () => {
       delete userList[socket.id];
       io.sockets.emit('userLeft', userData);
+    })
+
+
+    // Manage messages here
+    socket.on('addMessage', (data) => {
+      addMessage(data);
     })
   })
 }
