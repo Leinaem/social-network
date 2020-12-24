@@ -1,33 +1,13 @@
-import React, {
-  Fragment,
-  // useEffect,
-  useState,
-  useEffect,
-} from "react";
+import React, { Fragment } from "react";
 import "./../../style.css";
-import { useSelector } from "react-redux";
-import { socket } from "./../../service/socket";
+import ChatBoxContainer from './ChatBoxContainer';
 
 const ChatMainPage = () => {
-  const { userName } = useSelector((state) => state.login.userData);
-  const [message, setMessage] = useState("");
-  const [history, setHistory] = useState([]);
 
-  console.log(history);
 
-  useEffect(() => {
-    const fetchHistory = async () => {
-      const history = await fetch("http://localhost:82/history");
-      const result = await history.json();
-      setHistory(result);
-    };
-
-    fetchHistory();
-  }, []);
-
-  useEffect(() => {
-    // console.log(message);
-  }, [message]);
+  // useEffect(() => {
+  //   // console.log(message);
+  // }, [message]);
 
   // /**
   //  * Add message in chat box
@@ -84,24 +64,7 @@ const ChatMainPage = () => {
   //   setMessage(e.target.value);
   // };
 
-  /**
-   * Send message to everyone
-   */
-  const send = () => {
-    if (message.trim().length) {
-      const newMessage = {
-        message,
-        userName,
-      };
-      socket.emit("addMessage", newMessage);
-      console.log("send message");
-      const inputText = document.getElementById("inputMessage");
-      inputText.value = "";
-      // insertMessage("self", null);
 
-      return false;
-    }
-  };
 
   // /**
   //  * Check keypress for Enter
@@ -147,27 +110,9 @@ const ChatMainPage = () => {
     <Fragment>
       <div style={{ border: "1px solid red" }} id="connected-user"></div>
       <h1>Temps réel</h1>
-      <div className="chatContainer">
-        <div id="chatBox"></div>
-        <div className="formContainer">
-          <textarea
-            type="text"
-            id="inputMessage"
-            autoFocus
-            onChange={(e) => setMessage(e.target.value)}
-          ></textarea>
-          <button
-            id="sendBtn"
-            type="button"
-            value="Envoyer"
-            onClick={() => send()}
-          >
-            Envoyer
-          </button>
-        </div>
-      </div>
+      <ChatBoxContainer />
     </Fragment>
   );
 };
 
-export default ChatMainPage;
+export default React.memo(ChatMainPage);
