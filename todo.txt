@@ -1,7 +1,7 @@
 GLOBAL 
 
 - Pour les message du chat, ne plus passer par le userName mais par le userId.
-
+- mirroring after merge on gitlab
 
 FRONT
 
