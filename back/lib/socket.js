@@ -1,6 +1,4 @@
 const md5 = require('MD5');
-const { addMessage, getHistory } = require('./message');
-
 const socketManagement = (io) => {
 
   const userList = {}
@@ -39,11 +37,11 @@ const socketManagement = (io) => {
       io.sockets.emit('userLeft', userData);
     })
 
-
-    // Manage messages here
-    socket.on('addMessage', (data) => {
-      addMessage(data);
+    socket.on('addMessage', (newMessage) => {
+      io.sockets.emit('message', newMessage);
     })
+
+
   })
 }
 

@@ -72,6 +72,7 @@ export const fetchCurrentUser = (id) => {
  */
 export const setLogOut = () => {
   localStorage.removeItem("userId");
+  // localStorage.clear(); ???
   return {
     type: SET_LOGOUT,
   };

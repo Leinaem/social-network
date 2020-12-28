@@ -4,7 +4,7 @@ const Message = (props) => {
   const { data } = props;
 
   return (
-    <div key={data._id}>
+    <div>
       <p><span>{data.name} : </span>{data.message}</p>      
     </div>
   );

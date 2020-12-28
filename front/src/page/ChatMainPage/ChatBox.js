@@ -1,18 +1,7 @@
-import React, { Component } from 'react';
-import Message from './Message';
+import React from 'react';
 
 const ChatBox = (props) => {
-  const { history } = props;
-
-  /**
-   * Display chat message
-   *
-   * @param {*} item 
-   * @return {Component} Message component
-   */
-  const displayMessage = (item) => {
-    return <Message data={item} key={item._id}/>
-  }
+  const { history, displayMessage } = props;
 
   return (
     <div id="chatBox">
