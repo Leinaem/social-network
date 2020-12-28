@@ -1,0 +1,15 @@
+GLOBAL 
+
+- Pour les message du chat, ne plus passer par le userName mais par le userId.
+
+
+FRONT
+
+- ajout proxy dans le package json
+- Style, refacto le css dans le chat, le faire en scss
+- style, faire le style de la 'user list box'
+
+
+BACK
+- ajouter le shema "channel.js" pour une future gestion des différents canaux
+
