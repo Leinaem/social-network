@@ -1,0 +1,35 @@
+// get users list
+GET http://localhost:82/users
+
+###
+
+POST http://localhost:82/signup
+Content-Type: application/json
+
+{
+    "userName": "seb",
+    "password": "1234"
+}
+
+###
+
+POST http://localhost:82/signin
+Content-Type: application/json
+
+{
+    "userName": "seb",
+    "password": "1234"
+}
+
+###
+
+GET http://localhost:82/getuser
+Content-Type: application/json
+
+{
+    "userName": "seb"
+}
+
+
+###
+GET http://localhost:82/history
