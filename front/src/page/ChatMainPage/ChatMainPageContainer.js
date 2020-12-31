@@ -12,36 +12,16 @@ const ChatMainPageContainer = () => {
   const dispatch = useDispatch();
 
   /**
-   * Socket Connect / Disconnect
+   * Socket Login
    */
   useEffect(() => {
-    const { userName, admin } = userData;
+    const { userName, admin, id } = userData;
 
     socket.emit("login", {
+      userId: id,
       userName,
       admin,
     });
-
-    socket.on("newUser", (newUser) => {
-      const userListContainer = document.getElementById("connected-user");
-      const newAvatar = document.createElement("img");
-      newAvatar.setAttribute("src", newUser.avatar);
-      newAvatar.setAttribute("id", newUser.id);
-      newAvatar.setAttribute("user-name", newUser.userName);
-      userListContainer.appendChild(newAvatar);
-    });
-
-    socket.on("userLeft", (user) => {
-      const userImg = document.getElementById(user.id);
-      if (userImg) {
-        userImg.remove();
-      }
-    });
-
-    return () => {
-      socket.off("newUser");
-      socket.off("userLeft");
-    };
   }, [userData]);
 
   useEffect(() => {

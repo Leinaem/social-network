@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const Message = (props) => {
   const { data } = props;
 
   return (
     <div>
-      <p><span>{data.name} : </span>{data.message}</p>      
+      <p>
+        <span>{data.name} : </span>
+        {data.message}
+      </p>
     </div>
   );
 };

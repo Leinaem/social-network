@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 
 const TopBar = (props) => {
@@ -7,11 +7,11 @@ const TopBar = (props) => {
 
   const renderBtn = () => {
     return (
-      <Fragment>
+      <div id="top-bar">
         <p>{userData.userName}</p>
         <p>{userData.admin}</p>
         <button onClick={() => handleDisconnect()}>Déconnection</button>
-      </Fragment>
+      </div>
     );
   };
 

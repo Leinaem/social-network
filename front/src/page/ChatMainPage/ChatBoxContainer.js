@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { socket } from "./../../service/socket";
 import { useSelector } from "react-redux";
-import ChatBox from './ChatBox';
-import Message from './Message';
+import ChatBox from "./ChatBox";
+import Message from "./Message";
+import ConnectedUser from "./ConnectedUser";
 
 const ChatBoxContainer = () => {
   const { userName } = useSelector((state) => state.login.userData);
@@ -29,14 +30,14 @@ const ChatBoxContainer = () => {
         },
         body: JSON.stringify(newMessage),
       })
-      .then((res) => res.json())
-      .then((json) => {
-        if ('err' in json === false) {
-          const inputText = document.getElementById("inputMessage");
-          inputText.value = "";
-          socket.emit("addMessage", newMessage);
-        } 
-      })
+        .then((res) => res.json())
+        .then((json) => {
+          if ("err" in json === false) {
+            const inputText = document.getElementById("inputMessage");
+            inputText.value = "";
+            socket.emit("addMessage", newMessage);
+          }
+        });
     }
   };
 
@@ -47,8 +48,8 @@ const ChatBoxContainer = () => {
    * @return {Component} Message component
    */
   const displayMessage = (item) => {
-    return <Message data={item} key={item._id}/>
-  }
+    return <Message data={item} key={item._id} />;
+  };
 
   /**
    * Get history from dbb
@@ -73,15 +74,15 @@ const ChatBoxContainer = () => {
       document.getElementById("sendBtn").click();
     }
   };
-  
+
   /**
    * load/update history on component load or/and socket event
    */
   useEffect(() => {
     fetchHistory();
 
-    socket.on('message', () => {
-      fetchHistory();   
+    socket.on("message", () => {
+      fetchHistory();
     });
 
     return () => {
@@ -96,29 +97,19 @@ const ChatBoxContainer = () => {
     document.addEventListener("keypress", handleEnter);
 
     return () => {
-      document.removeEventListener('keypress', handleEnter)
-    }
-  }, [])
+      document.removeEventListener("keypress", handleEnter);
+    };
+  }, []);
 
   return (
-    <div className="chatContainer">
-      <ChatBox history={history} displayMessage={displayMessage} />
-      <div className="formContainer">
-        <textarea
-          autoFocus
-          type="text"
-          id="inputMessage"
-          onChange={(e) => setMessage(e.target.value)}
-        ></textarea>
-        <button
-          id="sendBtn"
-          type="button"
-          value="Envoyer"
-          onClick={() => send()}
-        >
-          Envoyer
-        </button>
-      </div>
+    <div id="chat-box-container">
+      <ChatBox
+        setMessage={setMessage}
+        send={send}
+        history={history}
+        displayMessage={displayMessage}
+      />
+      <ConnectedUser />
     </div>
   );
 };

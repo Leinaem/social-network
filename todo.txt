@@ -1,14 +1,16 @@
 GLOBAL 
 
 - Pour les message du chat, ne plus passer par le userName mais par le userId.
-- mirroring after merge on gitlab
 
 FRONT
 
 - ajout proxy dans le package json
 - Style, refacto le css dans le chat, le faire en scss
 - style, faire le style de la 'user list box'
-
+- handle enter, controle shift et focus
+- ***BUG*** plusieurs push "enter" valide plusieurs fois le meme message.
+- ***BUG*** dans le useEffect de "ChatMainPageContainer", gérer le changement 
+  de page dans l'url dans le componentsDidUnmout en plus de la déco déjé gérée.
 
 BACK
 - ajouter le shema "channel.js" pour une future gestion des différents canaux

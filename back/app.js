@@ -1,7 +1,7 @@
-const express  = require('express');
-const app      = express();
-const server   = require('http').createServer(app);
-const io       = require('socket.io').listen(server);
+const express = require('express');
+const app     = express();
+const server  = require('http').createServer(app);
+const io      = require('socket.io').listen(server);
 require('dotenv').config();
 
 // use cors for cross origin

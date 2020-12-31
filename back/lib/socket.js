@@ -14,7 +14,7 @@ const socketManagement = (io) => {
 
       userData = userConnected
       userData.avatar = 'https://gravatar.com/avatar/'+ md5(userData.userName) +'?s=50&d=identicon';
-      userData.id = socket.id
+      userData.socketId = socket.id
       userList[socket.id] = userData;
       // Emmettre à tous les autres      
       // socket.broadcast.emit('newUser', user)
@@ -40,7 +40,6 @@ const socketManagement = (io) => {
     socket.on('addMessage', (newMessage) => {
       io.sockets.emit('message', newMessage);
     })
-
 
   })
 }
