@@ -4,13 +4,15 @@ import { socket } from "./../../service/socket";
 const ConnectedUser = () => {
   useEffect(() => {
     socket.on("newUser", (newUser) => {
-      const userListContainer = document.getElementById("connected-user");
-      const newAvatar = document.createElement("img");
-      newAvatar.setAttribute("src", newUser.avatar);
-      newAvatar.setAttribute("id", newUser.userId);
-      newAvatar.setAttribute("socket-id", newUser.socketId);
-      newAvatar.setAttribute("user-name", newUser.userName);
-      userListContainer.appendChild(newAvatar);
+      if (!document.getElementById(newUser.userId)) {
+        const userListContainer = document.getElementById("connected-user");
+        const newAvatar = document.createElement("img");
+        newAvatar.setAttribute("src", newUser.avatar);
+        newAvatar.setAttribute("id", newUser.userId);
+        newAvatar.setAttribute("socket-id", newUser.socketId);
+        newAvatar.setAttribute("user-name", newUser.userName);
+        userListContainer.appendChild(newAvatar);
+      }
     });
 
     socket.on("userLeft", (user) => {
