@@ -13,7 +13,7 @@ const socketManagement = (io) => {
       }
 
       userData = userConnected
-      userData.avatar = 'https://gravatar.com/avatar/'+ md5(userData.userName) +'?s=50&d=identicon';
+      userData.avatar = 'https://gravatar.com/avatar/'+ md5(userData.userName) +'?s=30&d=identicon';
       userData.socketId = socket.id
       userList[socket.id] = userData;
       // Emmettre à tous les autres      

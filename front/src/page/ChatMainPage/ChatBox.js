@@ -7,7 +7,7 @@ const ChatBox = (props) => {
   return (
     <div id="chat-box">
       <ChatBoxContent history={history} displayMessage={displayMessage} />
-      <div className="formContainer" style={{ backgroundColor: "#ff0" }}>
+      <div className="formContainer">
         <textarea
           autoFocus
           type="text"
