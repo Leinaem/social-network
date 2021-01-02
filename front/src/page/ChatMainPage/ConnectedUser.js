@@ -7,6 +7,9 @@ const ConnectedUser = () => {
       if (!document.getElementById(newUser.userId)) {
         const userListContainer = document.getElementById("connected-user");
         const newAvatar = document.createElement("img");
+        newAvatar.setAttribute("width", "30px");
+        newAvatar.setAttribute("height", "30px");
+        newAvatar.setAttribute("alt", `${newUser.userName} avatar`);
         newAvatar.setAttribute("src", newUser.avatar);
         newAvatar.setAttribute("id", newUser.userId);
         newAvatar.setAttribute("socket-id", newUser.socketId);

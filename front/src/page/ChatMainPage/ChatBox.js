@@ -12,6 +12,7 @@ const ChatBox = (props) => {
           autoFocus
           type="text"
           id="inputMessage"
+          aria-label="Message"
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
         <button
