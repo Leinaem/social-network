@@ -8,8 +8,9 @@ const TopBar = (props) => {
   const renderBtn = () => {
     return (
       <div id="top-bar">
-        <p>{userData.userName}</p>
-        <p>{userData.admin}</p>
+        <p>user name : {userData.userName}</p>
+        <p>admin : {userData.admin}</p>
+        <p>user id : {userData.id}</p>
         <button onClick={() => handleDisconnect()}>Déconnection</button>
       </div>
     );

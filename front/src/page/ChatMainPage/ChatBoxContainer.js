@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { socket } from "./../../service/socket";
+import ConnectedUser from "./ConnectedUser";
 import { useSelector } from "react-redux";
 import ChatBox from "./ChatBox";
 import Message from "./Message";
-import ConnectedUser from "./ConnectedUser";
 
 const ChatBoxContainer = () => {
-  const { userName } = useSelector((state) => state.login.userData);
+  const { userName, id: userId } = useSelector((state) => state.login.userData);
   const [message, setMessage] = useState("");
   const [history, setHistory] = useState([]);
 
@@ -21,11 +21,10 @@ const ChatBoxContainer = () => {
       const newMessage = {
         message,
         userName,
+        userId,
         edited: false,
         createdAt: new Date(Date.now()),
       };
-
-      console.log(newMessage);
 
       fetch("http://localhost:82/message", {
         method: "POST",
@@ -52,7 +51,11 @@ const ChatBoxContainer = () => {
    * @return {Component} Message component
    */
   const displayMessage = (item, key) => {
-    return <Message data={item} key={item._id ? item._id : key} />;
+    const author = item.userId === userId ? "self" : "other";
+
+    return (
+      <Message data={item} key={item._id ? item._id : key} author={author} />
+    );
   };
 
   /**

@@ -1,6 +1,5 @@
 const initialState = {
   isLogged: false, // boolean
-  userName: "", // string
   userData: {}, // object
   openForm: "login", // string
   serverError: "", // string
@@ -16,12 +15,6 @@ const LoginReducer = (state = initialState, action) => {
       return {
         ...state,
         isLogged: payload,
-      };
-    }
-    case "SET_USER_NAME": {
-      return {
-        ...state,
-        userName: payload,
       };
     }
     case "SET_OPEN_FORM_ACTION": {

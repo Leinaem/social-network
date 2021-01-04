@@ -16,6 +16,39 @@
       border: 1px solid #aaa;
       padding: 5px;
       margin-right: 5px;
+
+      .messageLine {
+        margin: 10px 5px;
+
+        .messageContainer {
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          padding: 3px 15px;
+          display: inline-block;
+          max-width: 80%;
+
+          .messageUserName {
+            font-size: 14px;
+            font-weight: bold;
+          }
+          .messageInfo {
+            font-size: 12px;
+          }
+
+          .messageContent {
+            text-align: left;
+            margin: 5px 0;
+            font-size: 14px;
+          }
+        }
+        .self {
+          background-color: #bbbbee;
+        }
+
+        .other {
+          background-color: #ddddee;
+        }
+      }
     }
 
     .formContainer {
@@ -62,16 +95,3 @@
     }
   }
 }
-
-// // TEMP //
-// #chat-box-container {
-//   background-color: #f00;
-
-//   #chat-box-content {
-//     background-color: #f80;
-//   }
-
-//   #connected-user {
-//     background-color: #0f0;
-//   }
-// }
