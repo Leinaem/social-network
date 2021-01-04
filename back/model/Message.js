@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const MessagesSchema = mongoose.Schema({
-  name: {
+  userName: {
     type: String,
     required: true
   },

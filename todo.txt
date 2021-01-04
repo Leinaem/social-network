@@ -4,7 +4,7 @@ GLOBAL
 
 FRONT
 
-- ajout proxy dans le package json
+- ajout proxy dans le package json  => ex : "proxy": "http://localhost:82",
 - Style, refacto le css dans le chat, le faire en scss
 - style, faire le style de la 'user list box'
 - handle enter, controle shift et focus

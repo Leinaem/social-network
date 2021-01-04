@@ -21,7 +21,11 @@ const ChatBoxContainer = () => {
       const newMessage = {
         message,
         userName,
+        edited: false,
+        createdAt: new Date(Date.now()),
       };
+
+      console.log(newMessage);
 
       fetch("http://localhost:82/message", {
         method: "POST",
@@ -47,8 +51,8 @@ const ChatBoxContainer = () => {
    * @param {object} item message data
    * @return {Component} Message component
    */
-  const displayMessage = (item) => {
-    return <Message data={item} key={item._id} />;
+  const displayMessage = (item, key) => {
+    return <Message data={item} key={item._id ? item._id : key} />;
   };
 
   /**
@@ -81,8 +85,8 @@ const ChatBoxContainer = () => {
   useEffect(() => {
     fetchHistory();
 
-    socket.on("message", () => {
-      fetchHistory();
+    socket.on("message", (messageInc) => {
+      setHistory((history) => [...history, messageInc]);
     });
 
     return () => {
@@ -115,6 +119,3 @@ const ChatBoxContainer = () => {
 };
 
 export default React.memo(ChatBoxContainer);
-
-// @toto, add this to package.json
-// "proxy": "http://localhost:82",

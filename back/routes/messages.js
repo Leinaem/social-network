@@ -1,6 +1,7 @@
 const DbMessage = require("../model/Message");
 
 const getHistory = async (req, res) => {
+  // await DbMessage.remove({userName : "sebas"})
   await DbMessage.find({}, (err, history) => {
       if (err) {
           return res.status(404).json();
@@ -17,13 +18,8 @@ const getHistory = async (req, res) => {
 }
 
 const addMessage = (req, res) => {
-  const { userName, message } = req.body;
-    const newMessage = new DbMessage({
-      name: userName,
-      message
-    });
+    const newMessage = new DbMessage(req.body);
   
-    console.log(req.body)
     newMessage.save({}, (err) => {
       if(err) {
         return res.status(520).json({err});

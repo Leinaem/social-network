@@ -5,7 +5,7 @@ const ChatBoxContent = (props) => {
 
   return (
     <div id="chat-box-content">
-      {history.map((item) => displayMessage(item))}
+      {history.map((item, key) => displayMessage(item, key))}
     </div>
   );
 };

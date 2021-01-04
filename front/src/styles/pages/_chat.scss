@@ -1,7 +1,6 @@
 #chat-box-container {
   display: flex;
   flex-direction: row;
-  background-color: #f00;
   padding: 5px;
   flex: 1;
   overflow: auto;
@@ -12,7 +11,6 @@
     flex-direction: column;
 
     #chat-box-content {
-      background-color: #f80;
       flex: 1;
       border-radius: 5px;
       border: 1px solid #aaa;
@@ -53,13 +51,27 @@
     }
   }
   #connected-user {
-    background-color: #0f0;
+    padding: 5px;
     overflow: auto;
     border-radius: 5px;
     border: 1px solid #aaa;
 
     img {
       display: block;
+      border-radius: 100%;
     }
   }
 }
+
+// // TEMP //
+// #chat-box-container {
+//   background-color: #f00;
+
+//   #chat-box-content {
+//     background-color: #f80;
+//   }
+
+//   #connected-user {
+//     background-color: #0f0;
+//   }
+// }
