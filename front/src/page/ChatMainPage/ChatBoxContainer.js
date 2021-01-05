@@ -38,6 +38,7 @@ const ChatBoxContainer = () => {
           if ("err" in json === false) {
             const inputText = document.getElementById("inputMessage");
             inputText.value = "";
+            setMessage("");
             socket.emit("addMessage", newMessage);
           }
         });
