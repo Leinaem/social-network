@@ -1,0 +1,23 @@
+.modal {
+  background-color: #fff;
+  margin: 20px;
+
+  .header,
+  .footer,
+  .content {
+    border: 1px solid #00f;
+    padding: 10px 20px;
+  }
+
+  .footer {
+    text-align: center;
+
+    button {
+      background-color: #0f0;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

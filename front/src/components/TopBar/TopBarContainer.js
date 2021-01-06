@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import TopBar from "./TopBar";
 import {
   setSocketConnectionAction,
@@ -7,9 +7,15 @@ import {
 import { setLogOut, isLoading } from "../../redux/Actions/user/LoginActions";
 import { socket } from "./../../service/socket";
 import { batch, useDispatch } from "react-redux";
+import { setProfilModalOpen } from "../../redux/Actions/user/ProfileActions";
+import ProfilModal from "./ProfileModal";
 
 const TopBarContainer = () => {
   const dispatch = useDispatch();
+
+  const handleModalProgilOpen = (open) => {
+    dispatch(setProfilModalOpen(open));
+  };
 
   const handleDisconnect = () => {
     socket.emit("logout");
@@ -21,7 +27,15 @@ const TopBarContainer = () => {
     });
   };
 
-  return <TopBar handleDisconnect={handleDisconnect} />;
+  return (
+    <Fragment>
+      <TopBar
+        handleDisconnect={handleDisconnect}
+        handleModalProgilOpen={handleModalProgilOpen}
+      />
+      <ProfilModal />
+    </Fragment>
+  );
 };
 
-export default TopBarContainer;
+export default React.memo(TopBarContainer);

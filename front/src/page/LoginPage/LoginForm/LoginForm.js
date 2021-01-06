@@ -5,7 +5,7 @@ import TextField from "@material-ui/core/TextField";
 
 const LoginForm = (props) => {
   const { signIn, showForm, register, handleSubmit, setError } = props;
-  const { tmpMessage } = useSelector((state) => state.login);
+  const { tmpMessage } = useSelector((state) => state.userLogin);
   let { errors } = props;
 
   const displayMessage = () => {

@@ -8,7 +8,7 @@ import {
 } from "./../../redux/Actions/socketActions";
 
 const ChatMainPageContainer = () => {
-  const { userData } = useSelector((state) => state.login);
+  const { userData } = useSelector((state) => state.userLogin);
   const dispatch = useDispatch();
 
   /**

@@ -7,7 +7,7 @@ const initialState = {
   isLoading: false, // boolean
 };
 
-const LoginReducer = (state = initialState, action) => {
+const UserLoginReducer = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
@@ -56,4 +56,4 @@ const LoginReducer = (state = initialState, action) => {
   }
 };
 
-export default LoginReducer;
+export default UserLoginReducer;

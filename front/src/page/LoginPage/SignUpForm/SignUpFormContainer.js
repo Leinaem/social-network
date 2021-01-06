@@ -9,7 +9,7 @@ import { yupResolver } from "@hookform/resolvers";
 import { useSelector, useDispatch } from "react-redux";
 
 const SignUpFormContainer = () => {
-  const { openForm } = useSelector((state) => state.login);
+  const { openForm } = useSelector((state) => state.userLogin);
   const showForm = openForm === "signUp";
   const dispatch = useDispatch();
 

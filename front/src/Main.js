@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux";
 import Loading from "./components/core/Loading";
 
 const Main = () => {
-  const { isLogged, isLoading } = useSelector((state) => state.login);
+  const { isLogged, isLoading } = useSelector((state) => state.userLogin);
   const dispatch = useDispatch();
 
   useEffect(() => {

@@ -6,7 +6,9 @@ import ChatBox from "./ChatBox";
 import Message from "./Message";
 
 const ChatBoxContainer = () => {
-  const { userName, id: userId } = useSelector((state) => state.login.userData);
+  const { userName, id: userId } = useSelector(
+    (state) => state.userLogin.userData
+  );
   const [message, setMessage] = useState("");
   const [history, setHistory] = useState([]);
 

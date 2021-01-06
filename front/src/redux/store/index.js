@@ -1,11 +1,13 @@
 import thunk from "redux-thunk";
-import LoginReducer from "../Reducers/LoginReducer";
+import UserLoginReducer from "../Reducers/user/UserLoginReducer";
 import SocketReducer from "../Reducers/SocketReducer";
 import { createStore, combineReducers, applyMiddleware } from "redux";
+import UserProfileReducer from "../Reducers/user/UserProfileReducer";
 
 export default createStore(
   combineReducers({
-    login: LoginReducer,
+    userProfile: UserProfileReducer,
+    userLogin: UserLoginReducer,
     socket: SocketReducer,
   }),
   applyMiddleware(thunk)
