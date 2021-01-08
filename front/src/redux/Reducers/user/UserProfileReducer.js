@@ -1,5 +1,5 @@
 const initialValues = {
-  profilModalOpen: false,
+  profilModalOpen: true,
 };
 
 const UserProfileReducer = (state = initialValues, action) => {

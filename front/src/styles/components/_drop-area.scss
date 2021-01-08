@@ -1,0 +1,36 @@
+$width: 250px;
+$height: 250px;
+$borderSize: 5px;
+
+.dropAreaContainer {
+  
+  .dropArea {
+    width: $width;
+    height: $height;
+    position: relative;
+    display: inline-block;
+    
+    svg {
+      position: absolute;
+      background-color: #ccc;
+      border-radius: 100%;
+      border: none;
+      right: 10px;
+      top: 10px;
+      width: 20px;
+      height: 20px;
+      
+      &:hover {
+        cursor: pointer;
+        background-color: #fff;
+
+      }
+    }
+    
+    img {
+      width: calc(#{$width} - (#{$borderSize} * 2 ));
+      height: calc(#{$height} - (#{$borderSize} * 2 ));
+      overflow: hidden;
+    }
+  }
+}

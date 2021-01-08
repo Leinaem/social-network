@@ -46,12 +46,7 @@ const LoginForm = (props) => {
         </div>
         {displayMessage()}
       </Fragment>
-      <Button
-        type="submit"
-        className="login-btn"
-        variant="contained"
-        color="primary"
-      >
+      <Button type="submit" variant="contained" color="primary">
         Connexion
       </Button>
     </form>
