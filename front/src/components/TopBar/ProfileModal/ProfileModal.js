@@ -18,14 +18,18 @@ const ProfileModal = (props) => {
     if (readOnly) {
       return (
         <div className="footer">
-          <Button variant="contained" color="secondary" onClick={() => onClose()}>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => onClose()}
+          >
             Fermer
           </Button>
           <Button
             variant="contained"
             color="primary"
             onClick={() => setReadOnly(false)}
-            >
+          >
             Modifier
           </Button>
         </div>
@@ -34,26 +38,33 @@ const ProfileModal = (props) => {
 
     return (
       <div className="footer">
-      <Button variant="contained" color="secondary" onClick={() => setReadOnly(true)}>
-        Annuler
-      </Button>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() => {
-          setReadOnly(true)
-          onClose()
-        }}
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => setReadOnly(true)}
         >
-        Enregistrer
-      </Button>
-    </div>
-    )
+          Annuler
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => {
+            setReadOnly(true);
+            onClose();
+          }}
+        >
+          Enregistrer
+        </Button>
+      </div>
+    );
   };
 
   return (
     <Modal open={open} onClose={onClose} header={header()} footer={footer()}>
-      <p>readOnly : {readOnly && <span>1</span>}{!readOnly && <span>0</span>}</p>
+      <p>
+        readOnly : {readOnly && <span>1</span>}
+        {!readOnly && <span>0</span>}
+      </p>
       <div className="content">
         <ProfileImage readOnly={readOnly} />
       </div>

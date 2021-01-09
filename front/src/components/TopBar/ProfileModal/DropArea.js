@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
-import CancelOutlinedIcon from '@material-ui/icons/CancelOutlined';
-
+import CancelOutlinedIcon from "@material-ui/icons/CancelOutlined";
 
 const DropArea = (props) => {
   const { data, setData, loadImage, err, readOnly } = props;
@@ -13,6 +12,9 @@ const DropArea = (props) => {
    */
   const handleOnDrop = (e) => {
     e.preventDefault();
+    if (readOnly) {
+      return false;
+    }
     const {
       dataTransfer: { files },
     } = e;
@@ -25,21 +27,39 @@ const DropArea = (props) => {
     loadImage(files[0]);
   };
 
+  /**
+   * Drag over event
+   *
+   * @param {Event} e drop event
+   * @return {void}
+   */
   const handleOnDragOver = (e) => {
     e.preventDefault();
-  };
-
-  const dropAreaImageStyle = {
-    // width: 250,
-    // height: 250,
   };
 
   const dynamicStyle = {
     border: readOnly ? "5px solid #ddd" : "5px dashed #aaa",
   };
 
+  /**
+   *
+   */
+  const displayImage = () => {
+    if (!data) {
+      return <p>placeholder ??</p>;
+    }
+    return (
+      data && (
+        <Fragment>
+          <img src={data} alt="profile" />
+          {!readOnly && <CancelOutlinedIcon onClick={() => setData(false)} />}
+        </Fragment>
+      )
+    );
+  };
+
   return (
-    <div className={"dropAreaContainer"} >
+    <div className={"dropAreaContainer"}>
       {err && <p>{err}</p>}
       <div
         className={"dropArea"}
@@ -47,16 +67,10 @@ const DropArea = (props) => {
         onDrop={(e) => handleOnDrop(e)}
         onDragOver={(e) => handleOnDragOver(e)}
       >
-        {data && (
-          <Fragment>
-            <img src={data}/>
-            <CancelOutlinedIcon onClick={() => setData(false)}/>
-          </Fragment>
-        )}
-
-
+        {displayImage()}
       </div>
     </div>
   );
 };
+
 export default DropArea;

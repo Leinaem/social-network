@@ -4,7 +4,7 @@ import DropArea from "./DropArea";
 const ProfileImage = (props) => {
   const [data, setData] = useState(null);
   const [err, setErr] = useState(false);
-  const { readOnly } = props
+  const { readOnly } = props;
 
   const loadImage = (file) => {
     const { size, type } = file;
@@ -19,8 +19,8 @@ const ProfileImage = (props) => {
     }
     setErr(false);
 
-    console.log(type)
-    console.log(size)
+    console.log(type);
+    console.log(size);
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = (loadEvt) => {
@@ -30,7 +30,13 @@ const ProfileImage = (props) => {
 
   return (
     <div>
-      <DropArea data={data} setData={setData} loadImage={loadImage} err={err} readOnly={readOnly} />
+      <DropArea
+        loadImage={loadImage}
+        readOnly={readOnly}
+        setData={setData}
+        data={data}
+        err={err}
+      />
       <input
         type="file"
         hidden={readOnly}
