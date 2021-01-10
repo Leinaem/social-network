@@ -1,8 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 import CancelOutlinedIcon from "@material-ui/icons/CancelOutlined";
+import Placeholder from "./../../../assets/image/profile-placeholder.png";
 
 const DropArea = (props) => {
-  const { data, setData, loadImage, err, readOnly } = props;
+  const { data, setData, loadImage, err, readOnly, refClick } = props;
 
   /**
    * On drop image on area
@@ -38,24 +39,7 @@ const DropArea = (props) => {
   };
 
   const dynamicStyle = {
-    border: readOnly ? "5px solid #ddd" : "5px dashed #aaa",
-  };
-
-  /**
-   *
-   */
-  const displayImage = () => {
-    if (!data) {
-      return <p>placeholder ??</p>;
-    }
-    return (
-      data && (
-        <Fragment>
-          <img src={data} alt="profile" />
-          {!readOnly && <CancelOutlinedIcon onClick={() => setData(false)} />}
-        </Fragment>
-      )
-    );
+    border: readOnly ? "5px solid #eee" : "5px dashed #aaa",
   };
 
   return (
@@ -67,7 +51,12 @@ const DropArea = (props) => {
         onDrop={(e) => handleOnDrop(e)}
         onDragOver={(e) => handleOnDragOver(e)}
       >
-        {displayImage()}
+        <img src={data ? data : Placeholder} alt="profile" />
+        {!readOnly && data ? (
+          <CancelOutlinedIcon onClick={() => setData(false)} />
+        ) : (
+          <div className="uplaodBtn" onClick={() => refClick()}></div>
+        )}
       </div>
     </div>
   );

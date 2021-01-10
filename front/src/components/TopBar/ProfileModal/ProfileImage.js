@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import DropArea from "./DropArea";
 
 const ProfileImage = (props) => {
   const [data, setData] = useState(null);
   const [err, setErr] = useState(false);
   const { readOnly } = props;
+  const inputFile = useRef(null);
 
   const loadImage = (file) => {
     const { size, type } = file;
@@ -19,8 +20,6 @@ const ProfileImage = (props) => {
     }
     setErr(false);
 
-    console.log(type);
-    console.log(size);
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = (loadEvt) => {
@@ -28,10 +27,19 @@ const ProfileImage = (props) => {
     };
   };
 
+  const refClick = () => {
+    if (readOnly) {
+      return false;
+    }
+
+    inputFile.current.click();
+  };
+
   return (
     <div>
       <DropArea
         loadImage={loadImage}
+        refClick={refClick}
         readOnly={readOnly}
         setData={setData}
         data={data}
@@ -39,9 +47,9 @@ const ProfileImage = (props) => {
       />
       <input
         type="file"
-        hidden={readOnly}
+        hidden={true}
         name="fileUpload"
-        // ref={fileInputRef}
+        ref={inputFile}
         accept=".png,.jpg,.jpeg"
         onChange={({
           target: {
