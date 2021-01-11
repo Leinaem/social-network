@@ -3,7 +3,7 @@ import CancelOutlinedIcon from "@material-ui/icons/CancelOutlined";
 import Placeholder from "./../../../assets/image/profile-placeholder.png";
 
 const DropArea = (props) => {
-  const { data, setData, loadImage, err, readOnly, refClick } = props;
+  const { data, setData, loadImage, err, readOnly, inputFile } = props;
 
   /**
    * On drop image on area
@@ -55,7 +55,10 @@ const DropArea = (props) => {
         {!readOnly && data ? (
           <CancelOutlinedIcon onClick={() => setData(false)} />
         ) : (
-          <div className="uplaodBtn" onClick={() => refClick()}></div>
+          <div
+            className="uplaodBtn"
+            onClick={() => inputFile.current.click()}
+          ></div>
         )}
       </div>
     </div>

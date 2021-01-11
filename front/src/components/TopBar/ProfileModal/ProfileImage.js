@@ -1,10 +1,11 @@
 import React, { useState, useRef } from "react";
 import DropArea from "./DropArea";
+import composeRefs from "@seznam/compose-react-refs";
 
 const ProfileImage = (props) => {
   const [data, setData] = useState(null);
   const [err, setErr] = useState(false);
-  const { readOnly } = props;
+  const { readOnly, register } = props;
   const inputFile = useRef(null);
 
   const loadImage = (file) => {
@@ -27,19 +28,11 @@ const ProfileImage = (props) => {
     };
   };
 
-  const refClick = () => {
-    if (readOnly) {
-      return false;
-    }
-
-    inputFile.current.click();
-  };
-
   return (
     <div>
       <DropArea
         loadImage={loadImage}
-        refClick={refClick}
+        inputFile={inputFile}
         readOnly={readOnly}
         setData={setData}
         data={data}
@@ -49,7 +42,8 @@ const ProfileImage = (props) => {
         type="file"
         hidden={true}
         name="fileUpload"
-        ref={inputFile}
+        disabled={readOnly}
+        ref={composeRefs(inputFile, register)}
         accept=".png,.jpg,.jpeg"
         onChange={({
           target: {

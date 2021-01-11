@@ -12,12 +12,20 @@ const ProfileModalContainer = () => {
     dispatch(setProfilModalOpen(false));
   };
 
+  const userProfileUpdate = (data) => {
+    handleModalClose();
+    setReadOnly(true);
+    console.log("SAVE DATA");
+    console.log(data);
+  };
+
   return (
     <ProfileModal
       open={profilModalOpen}
       onClose={handleModalClose}
       readOnly={readOnly}
       setReadOnly={setReadOnly}
+      userProfileUpdate={userProfileUpdate}
     />
   );
 };
