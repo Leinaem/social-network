@@ -50,8 +50,27 @@ const getUser = async (req, res) => {
     });
 }
 
+const { upload } = require('./../config/upload');
+
+const updateUser = async (req, res, err) => {
+    console.log('updateUser');
+
+    upload(req, res, (err) => {
+        console.log(req.file.filename);
+        console.log(req.body.userId);
+
+        // IF NO EEROR, SEND IN MONGODB
+      if (err) {
+          console.log(err)
+        res.sendStatus(500);
+      }
+      res.send(req.file);
+    });
+}
+
 module.exports = {
     createUser,
+    updateUser,
     logUser,
     getUser
 };

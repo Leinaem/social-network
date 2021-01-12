@@ -63,8 +63,9 @@ const ProfileModal = (props) => {
   return (
     <Modal open={open} onClose={onClose} header={header()} footer={footer()}>
       <div className="content">
-        <form onSubmit={handleSubmit(userProfileUpdate)}>
+        <form id="profileForm" onSubmit={handleSubmit(userProfileUpdate)}>
           <ProfileImage readOnly={readOnly} register={register} />
+          <input type="hidden" value="enter-user-id-here" name="userId" />
           <button hidden ref={submitBtn}></button>
         </form>
       </div>

@@ -12,11 +12,22 @@ const ProfileModalContainer = () => {
     dispatch(setProfilModalOpen(false));
   };
 
-  const userProfileUpdate = (data) => {
-    handleModalClose();
-    setReadOnly(true);
+  const userProfileUpdate = async (data) => {
+    // handleModalClose();
+    // setReadOnly(true);
     console.log("SAVE DATA");
     console.log(data);
+    const totoForm = document.getElementById("profileForm");
+    const formData = new FormData(totoForm);
+
+    fetch("http://localhost:82/userupdate", {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
   };
 
   return (

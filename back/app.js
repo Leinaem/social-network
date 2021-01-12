@@ -24,10 +24,11 @@ InitiateMongoServer();
 ///////////////////////////////
 
 //// USER ////
-const {createUser, logUser, getUser} = require('./routes/user');
+const {createUser, logUser, getUser, updateUser} = require('./routes/user');
 app.post('/signup', (req, res) => createUser(req, res));
 app.post('/signin', (req, res) => logUser(req, res));
 app.get('/getuser/:id', (req, res) => getUser(req, res));
+app.post('/userupdate', (req, res) => updateUser(req, res));
 
 //// MESSAGE ////
 const { getHistory, addMessage } = require('./routes/messages')
