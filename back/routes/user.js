@@ -45,31 +45,25 @@ const getUser = async (req, res) => {
             id: user._id,
             userName: user.userName,
             admin: user.admin,
-            createdAt: user.createdAt
+            createdAt: user.createdAt,
+            photo: user.photo
         }
     });
 }
 
 const { upload } = require('./../config/upload');
 
-const updateUser = async (req, res, err) => {
-    console.log('updateUser');
-
+const updateUser = async (req, res) => {
     upload(req, res, async (err) => {
-        // console.log('callback upload')
-        // console.log(req.file.filename);
-        // console.log(req.body.userId);
+        if (err) {
+            return res.status(500).json({ error: "Une erreur est survenue..." });
+        } else {
+            const user = await User.findOne({ _id: `${req.body.userId}` });
+            user.photo = req.file && req.file.filename ? req.file.filename : null
+            await user.save()
 
-      if (err) {
-        return res.status(500).json({ error: "Une erreur est survenue..." });
-      } else {
-        const user = await User.findOne({ _id: `${req.body.userId}` });
-        user.photo = req.file && req.file.filename ? req.file.filename : null
-
-        await user.save()
-
-        return res.send();
-      }
+            return res.send();
+        }
     });
 }
 

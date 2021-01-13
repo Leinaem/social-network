@@ -1,12 +1,13 @@
-import React from "react";
-import CancelOutlinedIcon from "@material-ui/icons/CancelOutlined";
-import Placeholder from "./../../../../assets/image/profile-placeholder.png";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useEffect } from "react";
 import { setUserProfileImageData } from "./../../../../redux/Actions/user/ProfileActions";
+import Placeholder from "./../../../../assets/image/profile-placeholder.png";
+import CancelOutlinedIcon from "@material-ui/icons/CancelOutlined";
+import { useSelector, useDispatch } from "react-redux";
 
 const DropArea = (props) => {
   const { loadImage, err, readOnly, inputFile, FileListItems } = props;
-  const { profileImageData: data } = useSelector((state) => state.userProfile);
+  const { tempProfileImageData } = useSelector((state) => state.userProfile);
+  const { photo } = useSelector((state) => state.userLogin.userData);
   const dispatch = useDispatch();
 
   /**
@@ -48,6 +49,18 @@ const DropArea = (props) => {
     dispatch(setUserProfileImageData(null));
   };
 
+  useEffect(() => {
+    if (photo) {
+      dispatch(
+        setUserProfileImageData(
+          `http://localhost:82/uploads/images/profile/${photo}`
+        )
+      );
+    } else {
+      dispatch(setUserProfileImageData(null));
+    }
+  }, [readOnly, photo, dispatch]);
+
   const dynamicStyle = {
     border: readOnly ? "5px solid #eee" : "5px dashed #aaa",
   };
@@ -61,14 +74,13 @@ const DropArea = (props) => {
         onDrop={(e) => handleOnDrop(e)}
         onDragOver={(e) => handleOnDragOver(e)}
       >
-        <img src={data ? data : Placeholder} alt="profile" />
-        {!readOnly && data ? (
+        <img src={tempProfileImageData || Placeholder} alt="profile" />
+        <div
+          className={!readOnly ? "uplaodBtn" : ""}
+          onClick={!readOnly ? () => inputFile.current.click() : undefined}
+        ></div>
+        {!readOnly && tempProfileImageData && (
           <CancelOutlinedIcon onClick={() => onRemove()} />
-        ) : (
-          <div
-            className="uplaodBtn"
-            onClick={() => inputFile.current.click()}
-          ></div>
         )}
       </div>
     </div>

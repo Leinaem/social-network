@@ -3,20 +3,19 @@ import ProfileModal from "./ProfileModal";
 import { useSelector, useDispatch } from "react-redux";
 import { setProfilModalOpen } from "../../../redux/Actions/user/ProfileActions";
 
+import { fetchCurrentUser } from "../../../redux/Actions/user/LoginActions";
+
 const ProfileModalContainer = () => {
   const { profilModalOpen } = useSelector((state) => state.userProfile);
-  const [readOnly, setReadOnly] = useState(false);
+  const { id } = useSelector((state) => state.userLogin.userData);
+  const [readOnly, setReadOnly] = useState(true);
   const dispatch = useDispatch();
 
   const handleModalClose = () => {
     dispatch(setProfilModalOpen(false));
   };
 
-  const userProfileUpdate = async (data) => {
-    // handleModalClose();
-    // setReadOnly(true);
-    console.log("SAVE DATA");
-    console.log(data);
+  const userProfileUpdate = async () => {
     const totoForm = document.getElementById("profileForm");
     const formData = new FormData(totoForm);
 
@@ -24,8 +23,10 @@ const ProfileModalContainer = () => {
       method: "POST",
       body: formData,
     })
-      .then((res) => {
-        console.log(res);
+      .then(() => {
+        dispatch(fetchCurrentUser(id));
+        handleModalClose();
+        setReadOnly(true);
       })
       .catch((err) => console.log(err));
   };

@@ -1,6 +1,6 @@
 const initialValues = {
-  profilModalOpen: true,
-  profileImageData: null,
+  profilModalOpen: false,
+  tempProfileImageData: null,
 };
 
 const UserProfileReducer = (state = initialValues, action) => {
@@ -16,7 +16,7 @@ const UserProfileReducer = (state = initialValues, action) => {
     case "SET_USER_PROFILE_IMAGE_DATA": {
       return {
         ...state,
-        profileImageData: payload,
+        tempProfileImageData: payload,
       };
     }
 
