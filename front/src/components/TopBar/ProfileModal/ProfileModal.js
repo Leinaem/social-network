@@ -1,12 +1,10 @@
 import React, { useRef } from "react";
-import Modal from "./../../core/Modal";
-import Button from "./../../core/Button";
-import ProfileImage from "./ProfileImage";
-import { useForm } from "react-hook-form";
+import Modal from "../../core/Modal";
+import Button from "../../core/Button";
+import ProfileForm from "./ProfilForm";
 
 const ProfileModal = (props) => {
   const { open, onClose, readOnly, setReadOnly, userProfileUpdate } = props;
-  const { register, handleSubmit } = useForm();
   const submitBtn = useRef(null);
 
   const header = () => {
@@ -63,11 +61,11 @@ const ProfileModal = (props) => {
   return (
     <Modal open={open} onClose={onClose} header={header()} footer={footer()}>
       <div className="content">
-        <form id="profileForm" onSubmit={handleSubmit(userProfileUpdate)}>
-          <ProfileImage readOnly={readOnly} register={register} />
-          <input type="hidden" value="enter-user-id-here" name="userId" />
-          <button hidden ref={submitBtn}></button>
-        </form>
+        <ProfileForm
+          userProfileUpdate={userProfileUpdate}
+          readOnly={readOnly}
+          submitBtn={submitBtn}
+        />
       </div>
     </Modal>
   );

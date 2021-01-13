@@ -16,6 +16,10 @@ const UsersSchema = mongoose.Schema({
   admin: {
     type: Number,
     default: 0
+  },
+  photo: {
+    type: String,
+    default: null
   }
 });
 

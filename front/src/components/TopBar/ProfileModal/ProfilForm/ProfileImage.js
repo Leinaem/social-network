@@ -1,12 +1,30 @@
 import React, { useState, useRef } from "react";
 import DropArea from "./DropArea";
 import composeRefs from "@seznam/compose-react-refs";
+import { useDispatch } from "react-redux";
+import { setUserProfileImageData } from "./../../../../redux/Actions/user/ProfileActions";
 
 const ProfileImage = (props) => {
-  const [data, setData] = useState(null);
   const [err, setErr] = useState(false);
   const { readOnly, register } = props;
   const inputFile = useRef(null);
+
+  const dispatch = useDispatch();
+
+  /**
+   * add file to input file on drag and drop
+   *
+   * @param {object} file dropped image file
+   * @return {object}
+   */
+  function FileListItems(file) {
+    const b = new ClipboardEvent("").clipboardData || new DataTransfer();
+    if (file) {
+      b.items.add(file);
+    }
+
+    return b.files;
+  }
 
   const loadImage = (file) => {
     const { size, type } = file;
@@ -21,24 +39,30 @@ const ProfileImage = (props) => {
     }
     setErr(false);
 
+    const profileInputFile = document.getElementById("fileUpload");
+    // On drag and drop
+    if (file in profileInputFile === false) {
+      profileInputFile.files = new FileListItems(file);
+    }
+
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = (loadEvt) => {
-      setData(loadEvt.target.result);
+      dispatch(setUserProfileImageData(loadEvt.target.result));
     };
   };
 
   return (
     <div>
       <DropArea
+        FileListItems={FileListItems}
         loadImage={loadImage}
         inputFile={inputFile}
         readOnly={readOnly}
-        setData={setData}
-        data={data}
         err={err}
       />
       <input
+        id="fileUpload"
         type="file"
         hidden={true}
         name="fileUpload"

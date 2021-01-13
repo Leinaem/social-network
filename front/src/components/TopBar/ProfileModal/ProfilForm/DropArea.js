@@ -1,9 +1,13 @@
 import React from "react";
 import CancelOutlinedIcon from "@material-ui/icons/CancelOutlined";
-import Placeholder from "./../../../assets/image/profile-placeholder.png";
+import Placeholder from "./../../../../assets/image/profile-placeholder.png";
+import { useSelector, useDispatch } from "react-redux";
+import { setUserProfileImageData } from "./../../../../redux/Actions/user/ProfileActions";
 
 const DropArea = (props) => {
-  const { data, setData, loadImage, err, readOnly, inputFile } = props;
+  const { loadImage, err, readOnly, inputFile, FileListItems } = props;
+  const { profileImageData: data } = useSelector((state) => state.userProfile);
+  const dispatch = useDispatch();
 
   /**
    * On drop image on area
@@ -24,7 +28,7 @@ const DropArea = (props) => {
       return false;
     }
 
-    setData(false);
+    dispatch(setUserProfileImageData(null));
     loadImage(files[0]);
   };
 
@@ -36,6 +40,12 @@ const DropArea = (props) => {
    */
   const handleOnDragOver = (e) => {
     e.preventDefault();
+  };
+
+  const onRemove = () => {
+    const profileInputFile = document.getElementById("fileUpload");
+    profileInputFile.files = new FileListItems(null);
+    dispatch(setUserProfileImageData(null));
   };
 
   const dynamicStyle = {
@@ -53,7 +63,7 @@ const DropArea = (props) => {
       >
         <img src={data ? data : Placeholder} alt="profile" />
         {!readOnly && data ? (
-          <CancelOutlinedIcon onClick={() => setData(false)} />
+          <CancelOutlinedIcon onClick={() => onRemove()} />
         ) : (
           <div
             className="uplaodBtn"
