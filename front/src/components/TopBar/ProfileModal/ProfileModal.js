@@ -7,14 +7,6 @@ const ProfileModal = (props) => {
   const { open, onClose, readOnly, setReadOnly, userProfileUpdate } = props;
   const submitBtn = useRef(null);
 
-  const header = () => {
-    return (
-      <div className="header">
-        <h1>Profil</h1>
-      </div>
-    );
-  };
-
   const footer = () => {
     if (readOnly) {
       return (
@@ -59,7 +51,7 @@ const ProfileModal = (props) => {
   };
 
   return (
-    <Modal open={open} onClose={onClose} header={header()} footer={footer()}>
+    <Modal open={open} onClose={onClose} title={"Profil"} footer={footer()}>
       <div className="content">
         <ProfileForm
           userProfileUpdate={userProfileUpdate}

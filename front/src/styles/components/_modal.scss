@@ -1,12 +1,30 @@
 .modal {
   background-color: #fff;
   margin: 20px;
+  min-width: 500px;
 
   .header,
   .footer,
   .content {
-    border: 1px solid #00f;
     padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .header {
+    position: relative;
+
+    .cross {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #777;
+      border-radius: 100%;
+      padding: 5px;
+      &:hover {
+        background-color: #ddd;
+        cursor: pointer;
+      }
+    }
   }
 
   .footer {
