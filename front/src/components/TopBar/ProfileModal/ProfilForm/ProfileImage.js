@@ -1,15 +1,20 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import DropArea from "./DropArea";
 import composeRefs from "@seznam/compose-react-refs";
-import { useDispatch } from "react-redux";
-import { setUserProfileImageData } from "./../../../../redux/Actions/user/ProfileActions";
+import { useDispatch, useSelector, batch } from "react-redux";
+import {
+  setUserProfileImageData,
+  setUserProfileImageError,
+  setUserProfileEdited,
+} from "./../../../../redux/Actions/user/ProfileActions";
 
 const ProfileImage = (props) => {
-  const [err, setErr] = useState(false);
-  const { readOnly, register } = props;
+  const { register } = props;
   const inputFile = useRef(null);
-
   const dispatch = useDispatch();
+  const { profileModalReadOnly: readOnly } = useSelector(
+    (state) => state.userProfile
+  );
 
   /**
    * add file to input file on drag and drop
@@ -26,18 +31,27 @@ const ProfileImage = (props) => {
     return b.files;
   }
 
+  /**
+   * Control file type, size then dispatch error or add file in data input
+   * @param {object} file image data
+   * @return  {false | void} false if error found
+   */
   const loadImage = (file) => {
+    if (!file) {
+      return false;
+    }
     const { size, type } = file;
     const fileTypes = ["image/jpeg", "image/jpg", "image/png"];
     if (!fileTypes.includes(type)) {
-      setErr("File format must be either png or jpg");
+      dispatch(
+        setUserProfileImageError("Veuillez insérer une image (jpg, jpeg, png)")
+      );
       return false;
     }
     if (size / 1024 / 1024 > 2) {
-      setErr("File size exceeded the limit of 2MB");
+      dispatch(setUserProfileImageError("Taille maximum autorisée : 2M"));
       return false;
     }
-    setErr(false);
 
     const profileInputFile = document.getElementById("fileUpload");
     // On drag and drop
@@ -50,6 +64,11 @@ const ProfileImage = (props) => {
     reader.onload = (loadEvt) => {
       dispatch(setUserProfileImageData(loadEvt.target.result));
     };
+
+    batch(() => {
+      dispatch(setUserProfileImageError(false));
+      dispatch(setUserProfileEdited(true));
+    });
   };
 
   return (
@@ -58,8 +77,6 @@ const ProfileImage = (props) => {
         FileListItems={FileListItems}
         loadImage={loadImage}
         inputFile={inputFile}
-        readOnly={readOnly}
-        err={err}
       />
       <input
         id="fileUpload"

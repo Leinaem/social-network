@@ -2,11 +2,28 @@ import React, { useRef } from "react";
 import Modal from "../../core/Modal";
 import Button from "../../core/Button";
 import ProfileForm from "./ProfilForm";
+import { useDispatch, useSelector, batch } from "react-redux";
+import {
+  setUserProfileEdited,
+  setUserProfileImageError,
+  setUserProfileModalReadOnly,
+} from "./../../../redux/Actions/user/ProfileActions";
 
 const ProfileModal = (props) => {
-  const { open, onClose, readOnly, setReadOnly, userProfileUpdate } = props;
-  const submitBtn = useRef(null);
+  const { open, onClose, userProfileUpdate } = props;
+  const {
+    profileImageError: err,
+    profileModalReadOnly: readOnly,
+  } = useSelector((state) => state.userProfile);
 
+  const submitBtn = useRef(null);
+  const dispatch = useDispatch();
+
+  /**
+   * Build profil modal footer
+   *
+   * @return {JSX} return footer div
+   */
   const footer = () => {
     if (readOnly) {
       return (
@@ -21,7 +38,7 @@ const ProfileModal = (props) => {
           <Button
             variant="contained"
             color="primary"
-            onClick={() => setReadOnly(false)}
+            onClick={() => dispatch(setUserProfileModalReadOnly(false))}
           >
             Modifier
           </Button>
@@ -34,7 +51,13 @@ const ProfileModal = (props) => {
         <Button
           variant="contained"
           color="secondary"
-          onClick={() => setReadOnly(true)}
+          onClick={() => {
+            batch(() => {
+              dispatch(setUserProfileModalReadOnly(true));
+              dispatch(setUserProfileImageError(false));
+              dispatch(setUserProfileEdited(false));
+            });
+          }}
         >
           Annuler
         </Button>
@@ -43,6 +66,7 @@ const ProfileModal = (props) => {
           color="primary"
           type="submit"
           onClick={() => submitBtn.current.click()}
+          disabled={Boolean(err)}
         >
           Enregistrer
         </Button>
@@ -55,7 +79,6 @@ const ProfileModal = (props) => {
       <div className="content">
         <ProfileForm
           userProfileUpdate={userProfileUpdate}
-          readOnly={readOnly}
           submitBtn={submitBtn}
         />
       </div>

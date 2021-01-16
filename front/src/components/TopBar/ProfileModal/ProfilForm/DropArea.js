@@ -1,13 +1,19 @@
-import React, { useEffect } from "react";
-import { setUserProfileImageData } from "./../../../../redux/Actions/user/ProfileActions";
+import React from "react";
+import {
+  setUserProfileImageData,
+  setUserProfileEdited,
+} from "./../../../../redux/Actions/user/ProfileActions";
 import Placeholder from "./../../../../assets/image/profile-placeholder.png";
 import CancelOutlinedIcon from "@material-ui/icons/CancelOutlined";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch, batch } from "react-redux";
 
 const DropArea = (props) => {
-  const { loadImage, err, readOnly, inputFile, FileListItems } = props;
-  const { tempProfileImageData } = useSelector((state) => state.userProfile);
-  const { photo } = useSelector((state) => state.userLogin.userData);
+  const { loadImage, inputFile, FileListItems } = props;
+  const {
+    tempProfileImageData,
+    profileImageError: err,
+    profileModalReadOnly: readOnly,
+  } = useSelector((state) => state.userProfile);
   const dispatch = useDispatch();
 
   /**
@@ -43,38 +49,36 @@ const DropArea = (props) => {
     e.preventDefault();
   };
 
+  /**
+   * remove imgage from input field
+   *
+   * @return {void}
+   */
   const onRemove = () => {
     const profileInputFile = document.getElementById("fileUpload");
     profileInputFile.files = new FileListItems(null);
-    dispatch(setUserProfileImageData(null));
+    batch(() => {
+      dispatch(setUserProfileImageData(null));
+      dispatch(setUserProfileEdited(true));
+    });
   };
 
-  useEffect(() => {
-    if (photo) {
-      dispatch(
-        setUserProfileImageData(
-          `http://localhost:82/uploads/images/profile/${photo}`
-        )
-      );
-    } else {
-      dispatch(setUserProfileImageData(null));
-    }
-  }, [readOnly, photo, dispatch]);
-
   const dynamicStyle = {
-    border: readOnly ? "5px solid #eee" : "5px dashed #aaa",
+    border: readOnly ? "3px solid #ddd" : "3px dashed #aaa",
   };
 
   return (
     <div className={"dropAreaContainer"}>
-      {err && <p>{err}</p>}
       <div
         className={"dropArea"}
-        style={dynamicStyle}
         onDrop={(e) => handleOnDrop(e)}
         onDragOver={(e) => handleOnDragOver(e)}
       >
-        <img src={tempProfileImageData || Placeholder} alt="profile" />
+        <img
+          src={tempProfileImageData || Placeholder}
+          style={dynamicStyle}
+          alt="profile"
+        />
         <div
           className={!readOnly ? "uplaodBtn" : ""}
           onClick={!readOnly ? () => inputFile.current.click() : undefined}
@@ -82,6 +86,9 @@ const DropArea = (props) => {
         {!readOnly && tempProfileImageData && (
           <CancelOutlinedIcon onClick={() => onRemove()} />
         )}
+        <div className="dropAreaErrorContainer">
+          {err && !readOnly && <p className="dropAreaError">{err}</p>}
+        </div>
       </div>
     </div>
   );
