@@ -6,7 +6,7 @@ import {
   setUserProfileImageData,
   setUserProfileImageError,
   setUserProfileEdited,
-} from "./../../../../redux/Actions/user/ProfileActions";
+} from "@redux/Actions/user/ProfileActions";
 
 const ProfileImage = (props) => {
   const { register } = props;

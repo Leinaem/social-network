@@ -7,7 +7,7 @@ import {
   setUserProfileEdited,
   setUserProfileImageError,
   setUserProfileModalReadOnly,
-} from "./../../../redux/Actions/user/ProfileActions";
+} from "@redux/Actions/user/ProfileActions";
 
 const ProfileModal = (props) => {
   const { open, onClose, userProfileUpdate } = props;

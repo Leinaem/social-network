@@ -2,8 +2,8 @@ import React from "react";
 import {
   setUserProfileImageData,
   setUserProfileEdited,
-} from "./../../../../redux/Actions/user/ProfileActions";
-import Placeholder from "./../../../../assets/image/profile-placeholder.png";
+} from "@redux/Actions/user/ProfileActions";
+import Placeholder from "@image/profile-placeholder.png";
 import CancelOutlinedIcon from "@material-ui/icons/CancelOutlined";
 import { useSelector, useDispatch, batch } from "react-redux";
 

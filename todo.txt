@@ -8,7 +8,6 @@ FRONT
     - shift + enter = retour chariot
 - Button , add some types, icons
 - connected user, add popover or an other tooltip
-- ajouter un alias (webpack config ???) pour les imports de composants (./../../../../../......)
 
 BACK
 - rename profile photo, in callback after copy ??

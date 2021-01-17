@@ -3,11 +3,11 @@ import TopBar from "./TopBar";
 import {
   setSocketConnectionAction,
   setSocketIdAction,
-} from "./../../redux/Actions/socketActions";
-import { setLogOut, isLoading } from "../../redux/Actions/user/LoginActions";
+} from "@redux/Actions/socketActions";
+import { setLogOut, isLoading } from "@redux/Actions/user/LoginActions";
 import { socket } from "./../../service/socket";
 import { batch, useDispatch } from "react-redux";
-import { setProfilModalOpen } from "../../redux/Actions/user/ProfileActions";
+import { setProfilModalOpen } from "@redux/Actions/user/ProfileActions";
 import ProfilModal from "./ProfileModal";
 
 const TopBarContainer = () => {

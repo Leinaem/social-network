@@ -1,11 +1,11 @@
 import React from "react";
-import { fetchCurrentUser } from "../../../redux/Actions/user/LoginActions";
+import { fetchCurrentUser } from "@redux/Actions/user/LoginActions";
 import { useSelector, useDispatch, batch } from "react-redux";
 import {
   setUserProfileModalReadOnly,
   setUserProfileImageError,
   setProfilModalOpen,
-} from "../../../redux/Actions/user/ProfileActions";
+} from "@redux/Actions/user/ProfileActions";
 import ProfileModal from "./ProfileModal";
 
 const ProfileModalContainer = () => {

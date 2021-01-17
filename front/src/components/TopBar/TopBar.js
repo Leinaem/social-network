@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Placeholder from "./../../assets/image/profile-placeholder.png";
+import Placeholder from "@image/profile-placeholder.png";
+
 
 const TopBar = (props) => {
   const { handleDisconnect, handleModalProgilOpen } = props;

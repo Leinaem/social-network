@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import {
   setOpenFormAction,
   addTmpMessageAction,
-} from "../../../redux/Actions/user/LoginActions";
+} from "@redux/Actions/user/LoginActions";
 import { yupResolver } from "@hookform/resolvers";
 import { useSelector, useDispatch } from "react-redux";
 
