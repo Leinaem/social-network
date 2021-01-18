@@ -38,7 +38,7 @@ const ProfileModalContainer = () => {
     const formData = new FormData(totoForm);
 
     if (profileEdited) {
-      await fetch("http://localhost:82/userupdate", {
+      await fetch("/userupdate", {
         method: "POST",
         body: formData,
       })

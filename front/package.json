@@ -1,6 +1,7 @@
 {
   "name": "leinaem-social-network-front",
   "version": "0.1.0",
+  "proxy": "http://localhost:82",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.0.0",

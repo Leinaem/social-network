@@ -44,7 +44,7 @@ export const fetchCurrentUser = (id) => {
   return (dispatch) => {
     dispatch(
       async () =>
-        await fetch(`http://localhost:82/getuser/${id}`)
+        await fetch(`/getuser/${id}`)
           .then((res) => res.json())
           .then((data) => {
             if (data.error) {

@@ -25,7 +25,7 @@ const SignUpFormContainer = () => {
       dispatch(setOpenFormAction("signUp"));
     } else {
       const { userName, password } = data;
-      fetch("http://localhost:82/signup", {
+      fetch("/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

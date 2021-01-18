@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Placeholder from "@image/profile-placeholder.png";
 
-
 const TopBar = (props) => {
   const { handleDisconnect, handleModalProgilOpen } = props;
   const { userData } = useSelector((state) => state.userLogin);
@@ -14,7 +13,7 @@ const TopBar = (props) => {
           width="40px"
           src={
             userData.photo
-              ? `http://localhost:82/uploads/images/profile/${userData.photo}`
+              ? `/uploads/images/profile/${userData.photo}`
               : Placeholder
           }
           alt="profile-mini"

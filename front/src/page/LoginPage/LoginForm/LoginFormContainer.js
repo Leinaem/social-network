@@ -21,7 +21,7 @@ const LoginFormContainer = () => {
       dispatch(setOpenFormAction("login"));
     } else {
       const { userName, password } = data;
-      fetch("http://localhost:82/signin", {
+      fetch("/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

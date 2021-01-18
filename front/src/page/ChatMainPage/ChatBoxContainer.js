@@ -28,7 +28,7 @@ const ChatBoxContainer = () => {
         createdAt: new Date(Date.now()),
       };
 
-      fetch("http://localhost:82/message", {
+      fetch("/message", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -67,7 +67,7 @@ const ChatBoxContainer = () => {
    * @return {void}
    */
   const fetchHistory = async () => {
-    const history = await fetch("http://localhost:82/history");
+    const history = await fetch("/history");
     const result = await history.json();
     setHistory(result.history);
   };

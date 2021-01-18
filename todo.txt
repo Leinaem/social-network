@@ -2,7 +2,6 @@ GLOBAL
 
 FRONT
 
-- ajout proxy dans le package json  => ex : "proxy": "http://localhost:82",
 - handle enter, controle shift et focus 
     - si pas de focus, la touche enter ne doit pas envoyer le message
     - shift + enter = retour chariot
