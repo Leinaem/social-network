@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Placeholder from "@image/profile-placeholder.png";
 
 const TopBar = (props) => {
   const { handleDisconnect, handleModalProgilOpen } = props;
@@ -11,17 +10,13 @@ const TopBar = (props) => {
       <div id="top-bar">
         <img
           width="40px"
-          src={
-            userData.photo
-              ? `/uploads/images/profile/${userData.photo}`
-              : Placeholder
-          }
+          src={userData.photo.src}
           alt="profile-mini"
         />
         <p>user name : {userData.userName}</p>
         <p>admin : {userData.admin}</p>
         <p>user id : {userData.id}</p>
-        <p>user photo : {userData.photo || "pas de photo"}</p>
+        <p>user photo : {userData.photo.src}</p>
         <button onClick={() => handleDisconnect()}>Déconnection</button>
         <button onClick={() => handleModalProgilOpen(true)}>Profile</button>
       </div>

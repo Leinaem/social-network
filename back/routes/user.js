@@ -1,6 +1,8 @@
 const User = require("../model/User");
 const UserConnection = require("../model/UserConnection");
 const bcrypt = require('bcrypt');
+const md5 = require('MD5');
+
 
 const createUser = async (req, res) => {
     const { userName, password } = req.body;
@@ -40,13 +42,20 @@ const getUser = async (req, res) => {
         return res.status(404).json({ error: "Utilisateur non trouvé." });
     }
 
+    const photo = {
+        type: user.photo ? "photo" : "avatar",
+        src: user.photo
+        ?`/uploads/images/profile/${user.photo}`
+        : 'https://gravatar.com/avatar/'+ md5(user.userName) +'?s=30&d=identicon'
+    }
+
     return res.json({
         user : {
             id: user._id,
             userName: user.userName,
             admin: user.admin,
             createdAt: user.createdAt,
-            photo: user.photo
+            photo
         }
     });
 }

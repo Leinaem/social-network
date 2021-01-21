@@ -1,4 +1,3 @@
-const md5 = require('MD5');
 const socketManagement = (io) => {
 
   const userList = {}
@@ -12,9 +11,10 @@ const socketManagement = (io) => {
         socket.emit('newUser', userList[user])
       }
 
-      userData = userConnected
-      userData.avatar = 'https://gravatar.com/avatar/'+ md5(userData.userName) +'?s=30&d=identicon';
-      userData.socketId = socket.id
+      userData = {
+        ...userConnected,
+        socketId:  socket.id,
+      }
       userList[socket.id] = userData;
       // Emmettre à tous les autres      
       // socket.broadcast.emit('newUser', user)

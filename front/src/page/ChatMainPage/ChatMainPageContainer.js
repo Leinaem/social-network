@@ -15,12 +15,13 @@ const ChatMainPageContainer = () => {
    * Socket Login
    */
   useEffect(() => {
-    const { userName, admin, id } = userData;
+    const { userName, admin, id, photo } = userData;
 
     socket.emit("login", {
       userId: id,
       userName,
       admin,
+      photo: photo.src
     });
   }, [userData]);
 

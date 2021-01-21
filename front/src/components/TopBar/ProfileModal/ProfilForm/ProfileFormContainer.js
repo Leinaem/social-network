@@ -13,8 +13,8 @@ const ProfileFormContainer = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (photo) {
-      dispatch(setUserProfileImageData(`/uploads/images/profile/${photo}`));
+    if (photo.type === "photo") {
+      dispatch(setUserProfileImageData(`${photo.src}`));
     } else {
       dispatch(setUserProfileImageData(null));
     }
