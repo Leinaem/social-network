@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import Avatar from "~/components/core/Avatar";
 
 const TopBar = (props) => {
   const { handleDisconnect, handleModalProgilOpen } = props;
@@ -8,15 +9,8 @@ const TopBar = (props) => {
   const renderBtn = () => {
     return (
       <div id="top-bar">
-        <img
-          width="40px"
-          src={userData.photo.src}
-          alt="profile-mini"
-        />
+        <Avatar src={userData.photo.src} alt="profile-mini" size="40px" />
         <p>user name : {userData.userName}</p>
-        <p>admin : {userData.admin}</p>
-        <p>user id : {userData.id}</p>
-        <p>user photo : {userData.photo.src}</p>
         <button onClick={() => handleDisconnect()}>Déconnection</button>
         <button onClick={() => handleModalProgilOpen(true)}>Profile</button>
       </div>

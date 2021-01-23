@@ -21,7 +21,7 @@ const ChatMainPageContainer = () => {
       userId: id,
       userName,
       admin,
-      photo: photo.src
+      photo: photo.src,
     });
   }, [userData]);
 
