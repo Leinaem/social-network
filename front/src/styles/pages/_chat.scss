@@ -90,9 +90,8 @@
     border-radius: 5px;
     border: 1px solid #aaa;
 
-    img {
-      display: block;
-      border-radius: 100%;
+    .avatar-container {
+      margin-bottom: 5px;
     }
   }
 }

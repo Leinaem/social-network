@@ -1,37 +1,39 @@
-import React, { useEffect } from "react";
-import { socket } from "./../../service/socket";
+import React, { useState, useEffect } from "react";
+import { socket } from "~/service/socket";
+import Avatar from "~/components/core/Avatar";
 
-const ConnectedUser = () => {
+const ConnectedUserContainer = () => {
+  const [userList, setUserList] = useState([]);
+
   useEffect(() => {
     socket.on("newUser", (newUser) => {
-      if (!document.getElementById(newUser.userId)) {
-        const userListContainer = document.getElementById("connected-user");
-        const newAvatar = document.createElement("img");
-        newAvatar.setAttribute("width", "40px");
-        newAvatar.setAttribute("height", "40px");
-        newAvatar.setAttribute("alt", `${newUser.userName} avatar`);
-        newAvatar.setAttribute("src", newUser.photo);
-        newAvatar.setAttribute("id", newUser.userId);
-        newAvatar.setAttribute("socket-id", newUser.socketId);
-        newAvatar.setAttribute("user-name", newUser.userName);
-        userListContainer.appendChild(newAvatar);
-      }
+      setUserList((userList) => userList.concat(newUser));
     });
-
     socket.on("userLeft", (user) => {
-      const userImg = document.getElementById(user.userId);
-      if (userImg) {
-        userImg.remove();
-      }
+      setUserList(userList.filter((item) => item.userId !== user.userId));
     });
 
     return () => {
       socket.off("newUser");
       socket.off("userLeft");
     };
-  }, []);
+  }, [userList]);
 
-  return <div id="connected-user"></div>;
+  return (
+    <div id="connected-user">
+      {userList.map((item, key) => {
+        return (
+          <Avatar
+            userId={item.userId}
+            key={key}
+            size="40px"
+            src={item.photo}
+            alt={`avatar ${item.userName}`}
+          />
+        );
+      })}
+    </div>
+  );
 };
 
-export default ConnectedUser;
+export default ConnectedUserContainer;

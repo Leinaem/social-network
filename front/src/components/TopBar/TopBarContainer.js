@@ -1,14 +1,14 @@
 import React, { Fragment } from "react";
-import TopBar from "./TopBar";
+import { setLogOut, isLoading } from "@redux/Actions/user/LoginActions";
+import { setProfilModalOpen } from "@redux/Actions/user/ProfileActions";
+import { batch, useDispatch } from "react-redux";
+import { socket } from "./../../service/socket";
+import ProfilModal from "./ProfileModal/";
 import {
   setSocketConnectionAction,
   setSocketIdAction,
 } from "@redux/Actions/socketActions";
-import { setLogOut, isLoading } from "@redux/Actions/user/LoginActions";
-import { socket } from "./../../service/socket";
-import { batch, useDispatch } from "react-redux";
-import { setProfilModalOpen } from "@redux/Actions/user/ProfileActions";
-import ProfilModal from "./ProfileModal";
+import TopBar from "./TopBar";
 
 const TopBarContainer = () => {
   const dispatch = useDispatch();

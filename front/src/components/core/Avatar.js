@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Avatar = (props) => {
-  const { size, src, alt } = props;
+  const { size, src, alt, userId } = props;
   const [orientation, setOrientation] = useState("vertical");
 
   const displayImage = () => {
@@ -29,7 +29,11 @@ const Avatar = (props) => {
   };
 
   return (
-    <div className="avatar-container" style={{ width: size, height: size }}>
+    <div
+      id={userId}
+      className="avatar-container"
+      style={{ width: size, height: size }}
+    >
       {displayImage()}
     </div>
   );
