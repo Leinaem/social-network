@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Avatar = (props) => {
-  const { size, src, alt, userId } = props;
+  const { size, src, alt, userId, handleClick, setOpenedPopoverId } = props;
   const [orientation, setOrientation] = useState("vertical");
 
   const displayImage = () => {
@@ -33,6 +33,12 @@ const Avatar = (props) => {
       id={userId}
       className="avatar-container"
       style={{ width: size, height: size }}
+      onClick={(e) => {
+        if (handleClick && setOpenedPopoverId) {
+          setOpenedPopoverId(userId);
+          handleClick(e.currentTarget);
+        }
+      }}
     >
       {displayImage()}
     </div>
