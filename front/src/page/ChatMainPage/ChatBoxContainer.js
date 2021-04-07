@@ -81,7 +81,24 @@ const ChatBoxContainer = () => {
   const handleEnter = (e) => {
     if (e.code === "Enter") {
       e.preventDefault();
-      document.getElementById("sendBtn").click();
+      const inputText = document.getElementById('inputMessage');
+
+      // compare focus and text area
+      if (document.activeElement !== inputText) {
+        return false;
+      }
+
+      if(e.shiftKey) {
+        const caret = inputText.selectionStart
+        inputText.value = `${inputText.value.substring(0, caret)}\n${inputText.value.substring(caret, inputText.value.length)}`;
+        e.stopPropagation();
+        setMessage(inputText.value)
+        
+      } else {
+        document.getElementById("sendBtn").click();
+      }
+    } else {
+      return false;
     }
   };
 
