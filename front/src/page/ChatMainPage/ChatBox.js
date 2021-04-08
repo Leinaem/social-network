@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../components/core/Button";
 import ChatBoxContent from "./ChatBoxContent";
 
 const ChatBox = (props) => {
@@ -15,14 +16,14 @@ const ChatBox = (props) => {
           aria-label="Message"
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
-        <button
+        <Button
           id="sendBtn"
           type="button"
           value="Envoyer"
           onClick={() => send()}
         >
           Envoyer
-        </button>
+        </Button>
       </div>
     </div>
   );
