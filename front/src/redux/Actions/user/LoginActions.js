@@ -5,7 +5,7 @@ import {
   SET_IS_LOADING,
   ADD_TMP_MESSAGE,
   SET_OPEN_FORM_ACTION,
-} from "../../Constants/LoginConstants";
+} from "@redux/Constants/LoginConstants";
 
 export const setLoginAction = (login) => {
   return {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { socket } from "./../../service/socket";
+import { socket } from "~/service/socket";
 import ConnectedUser from "./ConnectedUser";
 import { useSelector } from "react-redux";
 import ChatBox from "./ChatBox";

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { socket } from "./../../service/socket";
+import { socket } from "~/service/socket";
 import { batch, useDispatch, useSelector } from "react-redux";
 import ChatMainPage from "./ChatMainPage";
 import {

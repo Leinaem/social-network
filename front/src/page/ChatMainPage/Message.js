@@ -1,5 +1,5 @@
 import React from "react";
-import { formatDate } from "./../../libs/Tools";
+import { formatDate } from "~/libs/Tools";
 import classNames from "classnames";
 
 const Message = (props) => {

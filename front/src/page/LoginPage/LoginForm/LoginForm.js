@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Button from "../../../components/core/Button";
+import Button from "~/components/core/Button";
 import TextField from "@material-ui/core/TextField";
 import { useSelector } from "react-redux";
 

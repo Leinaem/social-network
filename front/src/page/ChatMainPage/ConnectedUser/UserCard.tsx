@@ -1,8 +1,13 @@
 import React from "react";
-import Avatar from "~/components/core/Avatar";
+import Avatar from "../../../components/core/Avatar";
 
-const UserCard = (props) => {
-  const { photo, userName } = props.userData;
+interface userCardProps {
+  photo: string;
+  userName: string;
+}
+
+const UserCard: React.FC<userCardProps> = (props) => {
+  const { photo, userName } = props;
 
   return (
     <div className="user-card">

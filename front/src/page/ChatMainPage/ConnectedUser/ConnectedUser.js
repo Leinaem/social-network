@@ -57,7 +57,7 @@ const ConnectedUser = () => {
                 horizontal: "right",
               }}
             >
-              <UserCard userData={item} />
+              <UserCard photo={item.photo} userName={item.userName} />
             </Popover>
           </div>
         );

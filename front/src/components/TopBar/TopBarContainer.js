@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { setLogOut, isLoading } from "@redux/Actions/user/LoginActions";
 import { setProfilModalOpen } from "@redux/Actions/user/ProfileActions";
 import { batch, useDispatch } from "react-redux";
-import { socket } from "./../../service/socket";
+import { socket } from "~/service/socket";
 import ProfilModal from "./ProfileModal/";
 import {
   setSocketConnectionAction,

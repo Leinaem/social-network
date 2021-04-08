@@ -4,7 +4,7 @@ import {
   SET_USER_PROFILE_IMAGE_DATA,
   SET_USER_PROFILE_IMAGE_ERROR,
   SET_USER_PROFILE_MODAL_READ_ONLY,
-} from "../../Constants/UserProfileConstants";
+} from "@redux/Constants/UserProfileConstants";
 
 /**
  * Manage user profile modal open/close

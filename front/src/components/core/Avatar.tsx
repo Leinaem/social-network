@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 
-const Avatar = (props) => {
+interface avatarProps {
+  size?: string;
+  src: string;
+  alt: string;
+  userId?: string;
+  handleClick?: Function;
+  setOpenedPopoverId?: Function;
+}
+
+const Avatar: React.FC<avatarProps> = (props) => {
   const { size, src, alt, userId, handleClick, setOpenedPopoverId } = props;
   const [orientation, setOrientation] = useState("vertical");
 
