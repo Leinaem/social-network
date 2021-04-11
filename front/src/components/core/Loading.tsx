@@ -1,7 +1,7 @@
 import React from "react";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-const Loading = () => {
+const Loading: React.FC = (): JSX.Element => {
   return (
     <div>
       <CircularProgress />
