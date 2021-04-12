@@ -1,28 +1,31 @@
 import React from "react";
+import CancelOutlinedIcon from "@material-ui/icons/CancelOutlined";
+import { useSelector, useDispatch, batch } from "react-redux";
+import Placeholder from "@image/profile-placeholder.png";
 import {
   setUserProfileImageData,
   setUserProfileEdited,
-} from "@redux/Actions/user/ProfileActions";
-import Placeholder from "@image/profile-placeholder.png";
-import CancelOutlinedIcon from "@material-ui/icons/CancelOutlined";
-import { useSelector, useDispatch, batch } from "react-redux";
+} from "../../../../reduxOld/Actions/user/ProfileActions";
 
-const DropArea = (props) => {
+interface dropAreaProps {
+  loadImage: any;
+  inputFile: any;
+  FileListItems: any;
+}
+
+const DropArea: React.FC<dropAreaProps> = (props) => {
   const { loadImage, inputFile, FileListItems } = props;
   const {
     tempProfileImageData,
     profileImageError: err,
     profileModalReadOnly: readOnly,
-  } = useSelector((state) => state.userProfile);
+  } = useSelector((state: any) => state.userProfile);
   const dispatch = useDispatch();
 
   /**
    * On drop image on area
-   *
-   * @param {Event} e drop event
-   * @return {false | void}
    */
-  const handleOnDrop = (e) => {
+  const handleOnDrop = (e: any): void|false => {
     e.preventDefault();
     if (readOnly) {
       return false;
@@ -35,7 +38,7 @@ const DropArea = (props) => {
       return false;
     }
 
-    dispatch(setUserProfileImageData(null));
+    dispatch(setUserProfileImageData(''));
     loadImage(files[0]);
   };
 
@@ -45,7 +48,7 @@ const DropArea = (props) => {
    * @param {Event} e drop event
    * @return {void}
    */
-  const handleOnDragOver = (e) => {
+  const handleOnDragOver = (e: any) => {
     e.preventDefault();
   };
 
@@ -55,10 +58,10 @@ const DropArea = (props) => {
    * @return {void}
    */
   const onRemove = () => {
-    const profileInputFile = document.getElementById("fileUpload");
+    const profileInputFile = document.getElementById("fileUpload") as HTMLInputElement;
     profileInputFile.files = new FileListItems(null);
     batch(() => {
-      dispatch(setUserProfileImageData(null));
+      dispatch(setUserProfileImageData(''));
       dispatch(setUserProfileEdited(true));
     });
   };

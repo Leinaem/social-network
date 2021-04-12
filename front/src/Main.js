@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
+import { fetchCurrentUser } from "./reduxOld/Actions/user/LoginActions";
 import { HashRouter, Route, Switch } from "react-router-dom";
-import routeList from "./page/Routes";
-import Error from "./page/Error";
-import TopBar from "./components/TopBar/";
-import { useSelector } from "react-redux";
-import Login from "./page/LoginPage";
-import { fetchCurrentUser } from "./redux/Actions/user/LoginActions";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Loading from "./components/core/Loading";
+import TopBar from "./components/TopBar/";
+import routeList from "./page/Routes";
+import Login from "./page/LoginPage";
+import Error from "./page/Error";
 
 const Main = () => {
   const { isLogged, isLoading } = useSelector((state) => state.userLogin);
