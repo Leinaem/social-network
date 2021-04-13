@@ -5,7 +5,7 @@ import Placeholder from "@image/profile-placeholder.png";
 import {
   setUserProfileImageData,
   setUserProfileEdited,
-} from "../../../../reduxOld/Actions/user/ProfileActions";
+} from "../../../../redux/userProfileSlice";
 
 interface dropAreaProps {
   loadImage: any;

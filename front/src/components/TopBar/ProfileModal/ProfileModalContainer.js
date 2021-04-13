@@ -1,12 +1,12 @@
 import React from "react";
 import { fetchCurrentUser } from "@redux/Actions/user/LoginActions";
 import { useSelector, useDispatch, batch } from "react-redux";
+import ProfileModal from "./ProfileModal";
 import {
   setUserProfileModalReadOnly,
   setUserProfileImageError,
   setProfilModalOpen,
-} from "@redux/Actions/user/ProfileActions";
-import ProfileModal from "./ProfileModal";
+} from "../../../redux/userProfileSlice";
 
 const ProfileModalContainer = () => {
   const { profilModalOpen, profileEdited } = useSelector(

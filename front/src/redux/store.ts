@@ -1,17 +1,15 @@
-import { configureStore } from '@reduxjs/toolkit'
-import UserProfileReducer from "../reduxOld/Reducers/user/UserProfileReducer";
-import SocketReducer from "../reduxOld/Reducers/SocketReducer";
 import UserLoginReducer from "../reduxOld/Reducers/user/UserLoginReducer";
+import { configureStore } from '@reduxjs/toolkit';
 import Colors from "./colorsSlice";
+import Socket from "./socketSlice";
 
 export const store = configureStore({
   reducer: {
-    userProfile: UserProfileReducer,
     userLogin: UserLoginReducer,
-    socket: SocketReducer,
-    colorsStore: Colors
+    socketStore: Socket,
+    colorsStore: Colors,
   },
-})
+});
 
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

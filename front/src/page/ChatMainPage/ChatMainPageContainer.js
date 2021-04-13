@@ -5,7 +5,7 @@ import ChatMainPage from "./ChatMainPage";
 import {
   setSocketConnectionAction,
   setSocketIdAction,
-} from "@redux/Actions/socketActions";
+} from "../../redux/socketSlice";
 
 const ChatMainPageContainer = () => {
   const { userData } = useSelector((state) => state.userLogin);

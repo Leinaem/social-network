@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
-import Modal from "~/components//core/Modal";
-import Button from "~/components/core/Button";
-import ProfileForm from "./ProfilForm";
 import { useDispatch, useSelector, batch } from "react-redux";
+import Button from "~/components/core/Button";
+import Modal from "~/components//core/Modal";
 import {
   setUserProfileEdited,
   setUserProfileImageError,
   setUserProfileModalReadOnly,
-} from "@redux/Actions/user/ProfileActions";
+} from "../../../redux/userProfileSlice";
+import ProfileForm from "./ProfilForm";
 
 const ProfileModal = (props) => {
   const { open, onClose, userProfileUpdate } = props;
