@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import { fetchCurrentUser } from "./reduxOld/Actions/user/LoginActions";
 import { HashRouter, Route, Switch } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import Loading from "./components/core/Loading";
+import { fetchCurrentUser } from "./redux/lib";
 import TopBar from "./components/TopBar/";
 import routeList from "./page/Routes";
 import Login from "./page/LoginPage";

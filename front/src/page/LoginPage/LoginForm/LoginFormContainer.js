@@ -1,14 +1,14 @@
 import React from "react";
-import LoginForm from "./LoginForm";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchCurrentUser } from '../../../redux/lib';
+import { yupResolver } from "@hookform/resolvers";
 import { useForm } from "react-hook-form";
+import LoginForm from "./LoginForm";
 import {
   isLoading,
-  fetchCurrentUser,
   setOpenFormAction,
   addTmpMessageAction,
-} from "@redux/Actions/user/LoginActions";
-import { yupResolver } from "@hookform/resolvers";
-import { useSelector, useDispatch } from "react-redux";
+} from "../../../redux/loginSlice";
 
 const LoginFormContainer = () => {
   const { openForm } = useSelector((state) => state.userLogin);

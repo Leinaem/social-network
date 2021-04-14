@@ -6,7 +6,14 @@ FRONT
     - si pas de focus, la touche enter ne doit pas envoyer le message
     - shift + enter = retour chariot
 - Button , add some types, icons
-- connected user, add popover or an other tooltip
+- redux
+    - loginSlice
+        - remove 'any' and create interface
+        - check for "serverError" property
+    - use redux/hooks everywhere
+- typescript
+    - refact ALL JS to TS / TSX
+    - alias config
 
 BACK
 - rename profile photo, in callback after copy ??

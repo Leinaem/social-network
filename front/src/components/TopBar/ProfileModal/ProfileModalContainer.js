@@ -1,6 +1,6 @@
 import React from "react";
-import { fetchCurrentUser } from "@redux/Actions/user/LoginActions";
 import { useSelector, useDispatch, batch } from "react-redux";
+import { fetchCurrentUser } from "../../../redux/lib";
 import ProfileModal from "./ProfileModal";
 import {
   setUserProfileModalReadOnly,
@@ -34,8 +34,8 @@ const ProfileModalContainer = () => {
    * @return {void}
    */
   const userProfileUpdate = async () => {
-    const totoForm = document.getElementById("profileForm");
-    const formData = new FormData(totoForm);
+    const form = document.getElementById("profileForm");
+    const formData = new FormData(form);
 
     if (profileEdited) {
       await fetch("/userupdate", {

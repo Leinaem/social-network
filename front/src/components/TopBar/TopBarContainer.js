@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { setLogOut, isLoading } from "@redux/Actions/user/LoginActions";
+import { setLogOut, isLoading } from "../../redux/loginSlice";
 import { setProfilModalOpen } from "../../redux/userProfileSlice";
 import { batch, useDispatch } from "react-redux";
 import { socket } from "~/service/socket";

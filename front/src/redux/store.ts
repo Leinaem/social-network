@@ -1,13 +1,13 @@
-import UserLoginReducer from "../reduxOld/Reducers/user/UserLoginReducer";
 import { configureStore } from '@reduxjs/toolkit';
-import Colors from "./colorsSlice";
-import Socket from "./socketSlice";
+import userProfile from "./userProfileSlice";
+import userLogin from "./loginSlice";
+import socket from "./socketSlice";
 
 export const store = configureStore({
   reducer: {
-    userLogin: UserLoginReducer,
-    socketStore: Socket,
-    colorsStore: Colors,
+    userLogin: userLogin,
+    userProfile: userProfile,
+    socket: socket,
   },
 });
 

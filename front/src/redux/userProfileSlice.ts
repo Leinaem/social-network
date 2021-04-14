@@ -6,7 +6,7 @@ export interface UserProfileState {
     profileEdited: Boolean,
     tempProfileImageData: null|string,
     profileImageError: string|false,
-}
+};
 
 const initialState: UserProfileState = {
     profilModalOpen: false,
@@ -46,6 +46,6 @@ export const {
     setUserProfileImageData,
     setUserProfileImageError,
 } = userProfileSlice.actions;
-export const userProfileSelector = (state: { userProfileStore: UserProfileState }) => 
-state.userProfileStore;
+export const userProfileSelector = (state: { userProfile: UserProfileState }) => 
+state.userProfile;
 export default userProfileSlice.reducer;
