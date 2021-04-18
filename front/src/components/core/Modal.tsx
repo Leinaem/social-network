@@ -13,14 +13,7 @@ interface modalProps {
 }
 
 const Modal: React.FC<modalProps> = (props): JSX.Element => {
-  const {
-    noCloseCross,
-    children,
-    onClose,
-    footer,
-    title,
-    open,
-  } = props;
+  const { noCloseCross, children, onClose, footer, title, open } = props;
   const dynamicStyle = {};
 
   const header = (): JSX.Element => {

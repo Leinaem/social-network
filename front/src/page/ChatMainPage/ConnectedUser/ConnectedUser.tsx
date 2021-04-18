@@ -1,15 +1,23 @@
 import React, { useState, useEffect } from "react";
 import UserCard from "./UserCard";
-import { socket } from "~/service/socket";
-import Avatar from "~/components/core/Avatar";
+import { socket } from "../../../service/socket";
+import Avatar from "../../../components/core/Avatar";
 import Popover from "@material-ui/core/Popover";
 
+interface userData {
+  userId: string;
+  userName: string;
+  admin: number;
+  createdAt?: string;
+  photo: string;
+}
+
 const ConnectedUser = () => {
-  const [userList, setUserList] = useState([]);
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [userList, setUserList] = useState<userData[]>([]);
+  const [anchorEl, setAnchorEl] = useState<HTMLDivElement | null>(null);
   const [openedPopoverId, setOpenedPopoverId] = useState(null);
 
-  const handleClick = (t) => {
+  const handleClick = (t: HTMLDivElement | null) => {
     setAnchorEl(t);
   };
 
@@ -18,11 +26,14 @@ const ConnectedUser = () => {
   };
 
   useEffect(() => {
-    socket.on("newUser", (newUser) => {
+    socket.on("newUser", (newUser: userData) => {
       setUserList((userList) => userList.concat(newUser));
     });
-    socket.on("userLeft", (user) => {
-      setUserList(userList.filter((item) => item.userId !== user.userId));
+    socket.on("userLeft", (user: userData) => {
+      console.log(user);
+      setUserList(
+        userList.filter((item: userData) => item.userId !== user.userId)
+      );
     });
 
     return () => {
@@ -33,7 +44,7 @@ const ConnectedUser = () => {
 
   return (
     <div id="connected-user">
-      {userList.map((item, key) => {
+      {userList.map((item: any, key) => {
         return (
           <div key={key}>
             <Avatar

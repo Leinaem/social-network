@@ -35,7 +35,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "pretty-fix": "prettier --write src/**/*.{js,scss}",
+    "pretty-fix": "prettier --write src/**/*.{js,scss,tsx,ts}",
     "eslint": "eslint ./ --ignore-path .gitignore"
   },
   "eslintConfig": {

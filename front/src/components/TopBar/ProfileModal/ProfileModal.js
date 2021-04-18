@@ -75,12 +75,7 @@ const ProfileModal = (props) => {
   };
 
   return (
-    <Modal
-      open={open}
-      onClose={onClose}
-      title={"Profil"}
-      footer={footer()}
-    >
+    <Modal open={open} onClose={onClose} title={"Profil"} footer={footer()}>
       <div className="content">
         <ProfileForm
           userProfileUpdate={userProfileUpdate}

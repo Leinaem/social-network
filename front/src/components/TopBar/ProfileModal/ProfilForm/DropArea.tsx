@@ -25,7 +25,7 @@ const DropArea: React.FC<dropAreaProps> = (props) => {
   /**
    * On drop image on area
    */
-  const handleOnDrop = (e: any): void|false => {
+  const handleOnDrop = (e: any): void | false => {
     e.preventDefault();
     if (readOnly) {
       return false;
@@ -38,7 +38,7 @@ const DropArea: React.FC<dropAreaProps> = (props) => {
       return false;
     }
 
-    dispatch(setUserProfileImageData(''));
+    dispatch(setUserProfileImageData(""));
     loadImage(files[0]);
   };
 
@@ -58,10 +58,12 @@ const DropArea: React.FC<dropAreaProps> = (props) => {
    * @return {void}
    */
   const onRemove = () => {
-    const profileInputFile = document.getElementById("fileUpload") as HTMLInputElement;
+    const profileInputFile = document.getElementById(
+      "fileUpload"
+    ) as HTMLInputElement;
     profileInputFile.files = new FileListItems(null);
     batch(() => {
-      dispatch(setUserProfileImageData(''));
+      dispatch(setUserProfileImageData(""));
       dispatch(setUserProfileEdited(true));
     });
   };

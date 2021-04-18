@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore } from "@reduxjs/toolkit";
 import userProfile from "./userProfileSlice";
 import userLogin from "./loginSlice";
 import socket from "./socketSlice";

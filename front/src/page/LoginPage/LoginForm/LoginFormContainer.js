@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchCurrentUser } from '../../../redux/lib';
+import { fetchCurrentUser } from "../../../redux/lib";
 import { yupResolver } from "@hookform/resolvers";
 import { useForm } from "react-hook-form";
 import LoginForm from "./LoginForm";

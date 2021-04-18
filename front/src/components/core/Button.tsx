@@ -7,9 +7,7 @@ interface buttonProps extends ButtonProps {}
 const Button: React.FC<buttonProps> = (props) => {
   const { children, ...other } = props;
 
-  return (
-    <MuiButton {...other}>{children}</MuiButton>
-  );
+  return <MuiButton {...other}>{children}</MuiButton>;
 };
 
 export default Button;
