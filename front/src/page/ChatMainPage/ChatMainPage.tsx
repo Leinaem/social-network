@@ -1,12 +1,12 @@
-import React, { Fragment } from "react";
+import React from "react";
 import ChatBoxContainer from "./ChatBoxContainer";
 
-const ChatMainPage = () => {
+const ChatMainPage: React.FC = () => {
   return (
-    <Fragment>
+    <>
       <h1>Canal de discussion.</h1>
       <ChatBoxContainer />
-    </Fragment>
+    </>
   );
 };
 

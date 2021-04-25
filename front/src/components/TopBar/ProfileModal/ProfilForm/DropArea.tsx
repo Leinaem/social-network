@@ -1,15 +1,15 @@
 import React from "react";
 import CancelOutlinedIcon from "@material-ui/icons/CancelOutlined";
-import { useSelector, useDispatch, batch } from "react-redux";
+import { useDispatch, batch } from "react-redux";
 import Placeholder from "@image/profile-placeholder.png";
 import {
   setUserProfileImageData,
   setUserProfileEdited,
 } from "../../../../redux/userProfileSlice";
-
+import { useAppSelector } from '../../../../redux/hooks';
 interface dropAreaProps {
-  loadImage: any;
-  inputFile: any;
+  loadImage: Function;
+  inputFile: {current: HTMLElement};
   FileListItems: any;
 }
 
@@ -19,7 +19,7 @@ const DropArea: React.FC<dropAreaProps> = (props) => {
     tempProfileImageData,
     profileImageError: err,
     profileModalReadOnly: readOnly,
-  } = useSelector((state: any) => state.userProfile);
+  } = useAppSelector((state) => state.userProfile);
   const dispatch = useDispatch();
 
   /**
@@ -30,24 +30,15 @@ const DropArea: React.FC<dropAreaProps> = (props) => {
     if (readOnly) {
       return false;
     }
-    const {
-      dataTransfer: { files },
-    } = e;
-    const { length } = files;
-    if (length === 0) {
+    const files = e.dataTransfer?.files;
+    if (files?.length === 0) {
       return false;
     }
 
     dispatch(setUserProfileImageData(""));
-    loadImage(files[0]);
+    loadImage(files ? files[0]: null);
   };
 
-  /**
-   * Drag over event
-   *
-   * @param {Event} e drop event
-   * @return {void}
-   */
   const handleOnDragOver = (e: any) => {
     e.preventDefault();
   };

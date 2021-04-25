@@ -1,8 +1,15 @@
 import React from "react";
-import Button from "~/components/core/Button";
+import Button from "../../components/core/Button";
 import ChatBoxContent from "./ChatBoxContent";
 
-const ChatBox = (props) => {
+interface ChatBoxProps {
+  displayMessage: Function;
+  history: Array<Object>;
+  send: Function;
+  setMessage: Function;
+}
+
+const ChatBox: React.FC<ChatBoxProps> = (props) => {
   const { setMessage, send, history, displayMessage } = props;
 
   return (
@@ -11,7 +18,6 @@ const ChatBox = (props) => {
       <div className="formContainer">
         <textarea
           autoFocus
-          type="text"
           id="inputMessage"
           aria-label="Message"
           onChange={(e) => setMessage(e.target.value)}

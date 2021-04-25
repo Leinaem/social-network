@@ -1,23 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { socket } from "~/service/socket";
+import { socket } from "../../service/socket";
 import ConnectedUser from "./ConnectedUser";
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../../redux/hooks";
 import ChatBox from "./ChatBox";
 import Message from "./Message";
+import { MessageDataProps } from './Message';
 
-const ChatBoxContainer = () => {
-  const { userName, id: userId } = useSelector(
+const ChatBoxContainer: React.FC = () => {
+  const { userName, id: userId } = useAppSelector(
     (state) => state.userLogin.userData
   );
   const [message, setMessage] = useState("");
-  const [history, setHistory] = useState([]);
+  const [history, setHistory] = useState<MessageDataProps[]>([]);
 
-  /**
-   * Save message to dbb
-   * then emit to everyone
-   *
-   * @return {void}
-   */
   const send = () => {
     if (message.trim().length) {
       const newMessage = {
@@ -38,7 +33,7 @@ const ChatBoxContainer = () => {
         .then((res) => res.json())
         .then((json) => {
           if ("err" in json === false) {
-            const inputText = document.getElementById("inputMessage");
+            const inputText = document.getElementById("inputMessage") as HTMLInputElement;
             inputText.value = "";
             setMessage("");
             socket.emit("addMessage", newMessage);
@@ -47,13 +42,7 @@ const ChatBoxContainer = () => {
     }
   };
 
-  /**
-   * Display chat message
-   *
-   * @param {object} item message data
-   * @return {Component} Message component
-   */
-  const displayMessage = (item, key) => {
+  const displayMessage = (item: MessageDataProps, key: number) => {
     const author = item.userId === userId ? "self" : "other";
 
     return (
@@ -61,27 +50,16 @@ const ChatBoxContainer = () => {
     );
   };
 
-  /**
-   * Get history from dbb
-   *
-   * @return {void}
-   */
   const fetchHistory = async () => {
     const history = await fetch("/history");
     const result = await history.json();
     setHistory(result.history);
   };
 
-  /**
-   * Press enter event
-   *
-   * @param {event} e keyboard press event
-   * @return {void}
-   */
-  const handleEnter = (e) => {
+  const handleEnter = (e: KeyboardEvent) => {
     if (e.code === "Enter") {
       e.preventDefault();
-      const inputText = document.getElementById("inputMessage");
+      const inputText = document.getElementById("inputMessage") as HTMLInputElement;
 
       // compare focus and text area
       if (document.activeElement !== inputText) {
@@ -89,15 +67,15 @@ const ChatBoxContainer = () => {
       }
 
       if (e.shiftKey) {
-        const caret = inputText.selectionStart;
+        const caret: number|null = inputText?.selectionStart;
         inputText.value = `${inputText.value.substring(
           0,
-          caret
-        )}\n${inputText.value.substring(caret, inputText.value.length)}`;
+          caret as number
+        )}\n${inputText.value.substring(caret as number, inputText.value.length)}`;
         e.stopPropagation();
         setMessage(inputText.value);
       } else {
-        document.getElementById("sendBtn").click();
+        document.getElementById("sendBtn")?.click();
       }
     } else {
       return false;
@@ -110,8 +88,8 @@ const ChatBoxContainer = () => {
   useEffect(() => {
     fetchHistory();
 
-    socket.on("message", (messageInc) => {
-      setHistory((history) => [...history, messageInc]);
+    socket.on("message", (messageInc: MessageDataProps) => {
+      setHistory((history: MessageDataProps[]) => [...history, messageInc]);
     });
 
     return () => {

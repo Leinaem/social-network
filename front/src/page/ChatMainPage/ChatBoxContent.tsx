@@ -1,6 +1,11 @@
 import React from "react";
 
-const ChatBoxContent = (props) => {
+interface ChatBoxContentProps {
+  displayMessage: Function;
+  history: Array<Object>;
+}
+
+const ChatBoxContent: React.FC<ChatBoxContentProps> = (props) => {
   const { history, displayMessage } = props;
 
   return (

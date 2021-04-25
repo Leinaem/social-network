@@ -1,8 +1,23 @@
 import React from "react";
-import { formatDate } from "~/libs/Tools";
+import { formatDate } from "../../libs/Tools";
 import classNames from "classnames";
 
-const Message = (props) => {
+export interface MessageDataProps {
+  createdAt: string;
+  edited: Boolean;
+  message: string;
+  userId: string;
+  userName: string;
+  // __v: Number;
+  _id: string;
+}
+
+export interface MessageProps {
+  data: MessageDataProps;
+  author: string;
+}
+
+const Message: React.FC<MessageProps> = (props) => {
   const { data, author } = props;
 
   return (

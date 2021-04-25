@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
-import { socket } from "~/service/socket";
-import { batch, useDispatch, useSelector } from "react-redux";
+import { useAppSelector } from '../../redux/hooks';
+import { batch, useDispatch } from "react-redux";
+import { socket } from "../../service/socket";
 import ChatMainPage from "./ChatMainPage";
 import {
   setSocketConnectionAction,
   setSocketIdAction,
 } from "../../redux/socketSlice";
 
-const ChatMainPageContainer = () => {
-  const { userData } = useSelector((state) => state.userLogin);
+const ChatMainPageContainer: React.FC = () => {
+  const { userData } = useAppSelector((state) => state.userLogin);
   const dispatch = useDispatch();
 
   /**
@@ -21,12 +22,12 @@ const ChatMainPageContainer = () => {
       userId: id,
       userName,
       admin,
-      photo: photo.src,
+      photo: photo?.src,
     });
   }, [userData]);
 
   useEffect(() => {
-    socket.on("connected", (socketId) => {
+    socket.on("connected", (socketId: string) => {
       batch(() => {
         dispatch(setSocketConnectionAction(true));
         dispatch(setSocketIdAction(socketId));

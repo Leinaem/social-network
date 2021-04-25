@@ -44,7 +44,7 @@ const ConnectedUser = () => {
 
   return (
     <div id="connected-user">
-      {userList.map((item: any, key) => {
+      {userList.map((item: userData, key) => {
         return (
           <div key={key}>
             <Avatar
