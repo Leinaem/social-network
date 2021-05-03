@@ -1,10 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface UserProfileState {
-  profilModalOpen: Boolean;
-  profileModalReadOnly: Boolean;
-  profileEdited: Boolean;
-  tempProfileImageData: null | string;
+  profilModalOpen: boolean;
+  profileModalReadOnly: boolean;
+  profileEdited: boolean;
+  tempProfileImageData: null | ArrayBuffer | string;
   profileImageError: string | false;
 }
 
@@ -20,16 +20,16 @@ const userProfileSlice = createSlice({
   name: "userProfile",
   initialState,
   reducers: {
-    setProfilModalOpen(state, action: PayloadAction<Boolean>) {
+    setProfilModalOpen(state, action: PayloadAction<boolean>) {
       state.profilModalOpen = action.payload;
     },
-    setUserProfileModalReadOnly(state, action: PayloadAction<Boolean>) {
+    setUserProfileModalReadOnly(state, action: PayloadAction<boolean>) {
       state.profileModalReadOnly = action.payload;
     },
-    setUserProfileEdited(state, action: PayloadAction<Boolean>) {
+    setUserProfileEdited(state, action: PayloadAction<boolean>) {
       state.profileEdited = action.payload;
     },
-    setUserProfileImageData(state, action: PayloadAction<null | string>) {
+    setUserProfileImageData(state, action: PayloadAction<null | ArrayBuffer | string>) {
       state.tempProfileImageData = action.payload;
     },
     setUserProfileImageError(state, action: PayloadAction<string | false>) {

@@ -1,10 +1,16 @@
 import React from "react";
 import ProfileImage from "./ProfileImage";
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../../../../redux/hooks";
+import { ProfileFormContainerProps } from './ProfileFormContainer';
 
-const ProfileForm = (props) => {
+interface ProfileFormProps extends ProfileFormContainerProps {
+  handleSubmit: Function;
+  register: Function;
+}
+
+const ProfileForm: React.FC<ProfileFormProps> = (props) => {
   const { userProfileUpdate, handleSubmit, submitBtn, register } = props;
-  const { id: userId } = useSelector((state) => state.userLogin.userData);
+  const { id: userId } = useAppSelector((state) => state.userLogin.userData);
 
   return (
     <form id="profileForm" onSubmit={handleSubmit(userProfileUpdate)}>

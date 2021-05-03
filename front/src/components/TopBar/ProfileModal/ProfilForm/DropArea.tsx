@@ -9,8 +9,8 @@ import {
 import { useAppSelector } from '../../../../redux/hooks';
 interface dropAreaProps {
   loadImage: Function;
-  inputFile: {current: HTMLElement};
-  FileListItems: any;
+  inputFile: {current: HTMLInputElement | null};
+  FileListItems: Function;
 }
 
 const DropArea: React.FC<dropAreaProps> = (props) => {
@@ -52,7 +52,7 @@ const DropArea: React.FC<dropAreaProps> = (props) => {
     const profileInputFile = document.getElementById(
       "fileUpload"
     ) as HTMLInputElement;
-    profileInputFile.files = new FileListItems(null);
+    profileInputFile.files = new (FileListItems as any)(null);
     batch(() => {
       dispatch(setUserProfileImageData(""));
       dispatch(setUserProfileEdited(true));
@@ -71,13 +71,13 @@ const DropArea: React.FC<dropAreaProps> = (props) => {
         onDragOver={(e) => handleOnDragOver(e)}
       >
         <img
-          src={tempProfileImageData || Placeholder}
+          src={tempProfileImageData as string || Placeholder}
           style={dynamicStyle}
           alt="profile"
         />
         <div
           className={!readOnly ? "uplaodBtn" : ""}
-          onClick={!readOnly ? () => inputFile.current.click() : undefined}
+          onClick={!readOnly ? () => inputFile.current?.click() : undefined}
         ></div>
         {!readOnly && tempProfileImageData && (
           <CancelOutlinedIcon onClick={() => onRemove()} />

@@ -1,28 +1,24 @@
 import React, { useRef } from "react";
 import DropArea from "./DropArea";
 import composeRefs from "@seznam/compose-react-refs";
-import { useDispatch, useSelector, batch } from "react-redux";
+import { useDispatch, batch } from "react-redux";
+import { useAppSelector } from '../../../../redux/hooks';
 import {
   setUserProfileImageData,
   setUserProfileImageError,
   setUserProfileEdited,
 } from "../../../../redux/userProfileSlice";
 
-const ProfileImage = (props) => {
+const ProfileImage = (props: {register: any}) => {
   const { register } = props;
-  const inputFile = useRef(null);
+  const inputFile = useRef<HTMLInputElement>(null);
   const dispatch = useDispatch();
-  const { profileModalReadOnly: readOnly } = useSelector(
+  const { profileModalReadOnly: readOnly } = useAppSelector(
     (state) => state.userProfile
   );
 
-  /**
-   * add file to input file on drag and drop
-   *
-   * @param {object} file dropped image file
-   * @return {object}
-   */
-  function FileListItems(file) {
+
+  function FileListItems(file: File) {
     const b = new ClipboardEvent("").clipboardData || new DataTransfer();
     if (file) {
       b.items.add(file);
@@ -31,12 +27,10 @@ const ProfileImage = (props) => {
     return b.files;
   }
 
-  /**
-   * Control file type, size then dispatch error or add file in data input
-   * @param {object} file image data
-   * @return  {false | void} false if error found
-   */
-  const loadImage = (file) => {
+
+  const loadImage = (file: File) => {
+    console.log(file)
+
     if (!file) {
       return false;
     }
@@ -53,16 +47,15 @@ const ProfileImage = (props) => {
       return false;
     }
 
-    const profileInputFile = document.getElementById("fileUpload");
-    // On drag and drop
-    if (file in profileInputFile === false) {
-      profileInputFile.files = new FileListItems(file);
-    }
+    const profileInputFile = document.getElementById("fileUpload") as HTMLInputElement;
+    profileInputFile.files = new (FileListItems as any)(file);
 
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = (loadEvt) => {
-      dispatch(setUserProfileImageData(loadEvt.target.result));
+      if (loadEvt?.target) {
+        dispatch(setUserProfileImageData(loadEvt.target?.result));
+      }
     };
 
     batch(() => {
@@ -89,11 +82,11 @@ const ProfileImage = (props) => {
         onChange={({
           target: {
             validity,
-            files: [file],
+            files
           },
         }) => {
-          if (validity.valid) {
-            loadImage([file][0]);
+          if (validity.valid && files?.length) {
+            loadImage(files[0]);
           }
 
           return null;

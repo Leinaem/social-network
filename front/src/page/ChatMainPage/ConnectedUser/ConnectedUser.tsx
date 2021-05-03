@@ -30,7 +30,6 @@ const ConnectedUser = () => {
       setUserList((userList) => userList.concat(newUser));
     });
     socket.on("userLeft", (user: userData) => {
-      console.log(user);
       setUserList(
         userList.filter((item: userData) => item.userId !== user.userId)
       );
