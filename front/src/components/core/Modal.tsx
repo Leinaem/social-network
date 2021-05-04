@@ -10,6 +10,7 @@ interface modalProps {
   title?: string;
   noCloseCross?: boolean;
   footer?: JSX.Element;
+  children: JSX.Element;
 }
 
 const Modal: React.FC<modalProps> = (props): JSX.Element => {

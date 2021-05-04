@@ -2,18 +2,18 @@ import React, { Fragment } from "react";
 import { setLogOut, isLoading } from "../../redux/loginSlice";
 import { setProfilModalOpen } from "../../redux/userProfileSlice";
 import { batch, useDispatch } from "react-redux";
-import { socket } from "~/service/socket";
-import ProfilModal from "./ProfileModal/";
+import { socket } from "../../service/socket";
+import ProfilModal from "./ProfileModal";
 import {
   setSocketConnectionAction,
   setSocketIdAction,
 } from "../../redux/socketSlice";
 import TopBar from "./TopBar";
 
-const TopBarContainer = () => {
+const TopBarContainer: React.FC = () => {
   const dispatch = useDispatch();
 
-  const handleModalProgilOpen = (open) => {
+  const handleModalProgilOpen = (open: boolean) => {
     dispatch(setProfilModalOpen(open));
   };
 

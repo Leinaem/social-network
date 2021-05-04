@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface userData {
-  id?: string;
+  id: string;
   userName?: string;
   admin?: number;
   createdAt?: string;
-  photo?: {
+  photo: {
     type: string;
     src: string;
   };
@@ -28,7 +28,13 @@ const initialState: LoginState = {
   isLogged: false,
   openForm: "login",
   tmpMessage: null,
-  userData: {},
+  userData: {
+    id: "",
+    photo: {
+      type: "",
+      src: ""
+    }
+  },
   isLoading: false,
 };
 
@@ -53,7 +59,11 @@ const loginSlice = createSlice({
     },
     setLogOut(state) {
       state.isLogged = false;
-      state.userData = {};
+      state.userData = {id: "",
+      photo: {
+        type: "",
+        src: ""
+      }};
       state.isLoading = false;
     },
   },

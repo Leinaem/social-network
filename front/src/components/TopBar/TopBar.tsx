@@ -1,10 +1,15 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import Avatar from "~/components/core/Avatar";
+import Avatar from "../../components/core/Avatar";
+import { useAppSelector } from '../../redux/hooks';
 
-const TopBar = (props) => {
+interface TopBarProps {
+  handleModalProgilOpen: Function;
+  handleDisconnect: Function;
+}
+
+const TopBar: React.FC<TopBarProps> = (props) => {
   const { handleDisconnect, handleModalProgilOpen } = props;
-  const { userData } = useSelector((state) => state.userLogin);
+  const { userData } = useAppSelector((state) => state.userLogin);
 
   const renderBtn = () => {
     return (

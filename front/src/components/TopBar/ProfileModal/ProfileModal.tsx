@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
-import { useDispatch, useSelector, batch } from "react-redux";
-import Button from "~/components/core/Button";
-import Modal from "~/components//core/Modal";
+import { useDispatch, batch } from "react-redux";
+import { useAppSelector } from '../../../redux/hooks';
+import Button from "../../../components/core/Button";
+import Modal from "../../../components/core/Modal";
 import {
   setUserProfileEdited,
   setUserProfileImageError,
@@ -9,21 +10,22 @@ import {
 } from "../../../redux/userProfileSlice";
 import ProfileForm from "./ProfilForm";
 
-const ProfileModal = (props) => {
+interface ProfileModalProps {
+  open: boolean;
+  onClose: Function;
+  userProfileUpdate: Function;
+}
+
+const ProfileModal: React.FC<ProfileModalProps> = (props) => {
   const { open, onClose, userProfileUpdate } = props;
   const {
     profileImageError: err,
     profileModalReadOnly: readOnly,
-  } = useSelector((state) => state.userProfile);
+  } = useAppSelector((state) => state.userProfile);
 
-  const submitBtn = useRef(null);
+  const submitBtn: any = useRef(null);
   const dispatch = useDispatch();
 
-  /**
-   * Build profil modal footer
-   *
-   * @return {JSX} return footer div
-   */
   const footer = () => {
     if (readOnly) {
       return (
@@ -65,7 +67,7 @@ const ProfileModal = (props) => {
           variant="contained"
           color="primary"
           type="submit"
-          onClick={() => submitBtn.current.click()}
+          onClick={() => submitBtn.current?.click()}
           disabled={Boolean(err)}
         >
           Enregistrer
@@ -75,7 +77,12 @@ const ProfileModal = (props) => {
   };
 
   return (
-    <Modal open={open} onClose={onClose} title={"Profil"} footer={footer()}>
+    <Modal
+      open={open}
+      onClose={onClose}
+      title={"Profil"}
+      footer={footer()}
+    >
       <div className="content">
         <ProfileForm
           userProfileUpdate={userProfileUpdate}
