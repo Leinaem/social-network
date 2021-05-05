@@ -1,5 +1,6 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import { useAppSelector } from '../../../redux/hooks'; 
 import { fetchCurrentUser } from "../../../redux/lib";
 import { yupResolver } from "@hookform/resolvers";
 import { useForm } from "react-hook-form";
@@ -9,13 +10,14 @@ import {
   setOpenFormAction,
   addTmpMessageAction,
 } from "../../../redux/loginSlice";
+import { LoginData } from '../lib';
 
-const LoginFormContainer = () => {
-  const { openForm } = useSelector((state) => state.userLogin);
+const LoginFormContainer: React.FC = () => {
+  const { openForm } = useAppSelector((state) => state.userLogin);
   const showForm = openForm === "login";
   const dispatch = useDispatch();
 
-  const signIn = (data) => {
+  const signIn = (data: LoginData) => {
     dispatch(addTmpMessageAction(null));
     if (openForm === "signUp") {
       dispatch(setOpenFormAction("login"));

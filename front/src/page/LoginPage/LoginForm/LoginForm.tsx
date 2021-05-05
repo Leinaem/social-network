@@ -1,12 +1,14 @@
 import React, { Fragment } from "react";
-import Button from "~/components/core/Button";
+import Button from "../../../components/core/Button";
 import TextField from "@material-ui/core/TextField";
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../../../redux/hooks";
+import { LoginData, LoginFormProps } from '../lib';
 
-const LoginForm = (props) => {
+const LoginForm: React.FC<LoginFormProps> = (props) => {
   const { signIn, showForm, register, handleSubmit, setError } = props;
-  const { tmpMessage } = useSelector((state) => state.userLogin);
+  const { tmpMessage } = useAppSelector((state) => state.userLogin);
   let { errors } = props;
+  console.log(errors)
 
   const displayMessage = () => {
     if (showForm && tmpMessage && Object.keys(tmpMessage).length) {
@@ -19,7 +21,7 @@ const LoginForm = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit((data) => signIn(data, setError))}>
+    <form onSubmit={handleSubmit((data: LoginData) => signIn(data, setError))}>
       <Fragment>
         <div className={!showForm ? "hideForm" : "showForm"}>
           <TextField

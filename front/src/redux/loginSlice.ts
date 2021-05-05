@@ -48,7 +48,7 @@ const loginSlice = createSlice({
     setOpenFormAction(state, action: PayloadAction<string>) {
       state.openForm = action.payload;
     },
-    addTmpMessageAction(state, action: PayloadAction<tmpMessage>) {
+    addTmpMessageAction(state, action: PayloadAction<tmpMessage | null>) {
       state.tmpMessage = action.payload;
     },
     setUserData(state, action: PayloadAction<userData>) {

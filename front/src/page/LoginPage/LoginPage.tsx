@@ -1,9 +1,9 @@
 import React from "react";
-import LoginForm from "./LoginForm/";
-import SignUpForm from "./SignUpForm/";
 import { Divider } from "@material-ui/core";
+import SignUpForm from "./SignUpForm";
+import LoginForm from "./LoginForm";
 
-const LoginPage = () => {
+const LoginPage: React.FC = () => {
   return (
     <div className="login-form-container">
       <LoginForm />

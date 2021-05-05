@@ -6,10 +6,12 @@ import {
   addTmpMessageAction,
 } from "../../../redux/loginSlice";
 import { yupResolver } from "@hookform/resolvers";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import { useAppSelector } from '../../../redux/hooks';
+import { SignupData } from '../lib';
 
-const SignUpFormContainer = () => {
-  const { openForm } = useSelector((state) => state.userLogin);
+const SignUpFormContainer: React.FC = () => {
+  const { openForm } = useAppSelector((state) => state.userLogin);
   const showForm = openForm === "signUp";
   const dispatch = useDispatch();
 
@@ -19,7 +21,7 @@ const SignUpFormContainer = () => {
    * @param {function} setError set custom error
    * @return {void}
    */
-  const signUp = (data, setError) => {
+  const signUp = (data: SignupData, setError: Function) => {
     dispatch(addTmpMessageAction(null));
     if (!showForm) {
       dispatch(setOpenFormAction("signUp"));
