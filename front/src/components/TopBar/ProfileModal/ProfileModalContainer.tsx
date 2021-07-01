@@ -36,7 +36,7 @@ const ProfileModalContainer: React.FC = () => {
         body: formData,
       })
         .then(() => {
-          if (id) {
+          if (id && typeof(id) === "number") {
             dispatch(fetchCurrentUser(id));
           }
         })

@@ -5,13 +5,8 @@ import {
   isLoading,
 } from "./loginSlice";
 
-/**
- * Fetch current user datas
- * @param {String} id
- * @return {Function} Action dispatch
- */
-export const fetchCurrentUser = (id) => {
-  return (dispatch) => {
+export const fetchCurrentUser = (id: number) => {
+  return (dispatch: Function) => {
     dispatch(
       async () =>
         await fetch(`/getuser/${id}`)

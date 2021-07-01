@@ -45,7 +45,7 @@ const LoginFormContainer: React.FC = () => {
           } else if (json.id) {
             dispatch(isLoading(true));
             dispatch(addTmpMessageAction(null));
-            dispatch(fetchCurrentUser(json.id));
+            dispatch(fetchCurrentUser(json.id as number));
           }
         })
         .catch((err) => {
